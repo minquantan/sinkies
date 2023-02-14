@@ -13,5 +13,8 @@
  *= require_tree .
  *= require_self
  */
-@import "colours";
 @import "fonts";
+
+body {
+  background-color: $background_green;
+}
