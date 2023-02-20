@@ -1,5 +1,5 @@
 <%# navbar %>
-<div>
+<div class="navbar">
 
   <%# image %>
   <div class="navbar_logo">
@@ -7,13 +7,13 @@
   </div>
 
   <%# navigation links %>
-  <div>
+  <div class="navlink_container">
     <%= link_to "MENU", menu_path, class: "navlink" %>
     <%= link_to "SPACE", space_path, class: "navlink" %>
     <%= link_to "PROMOTION", promotion_path, class: "navlink" %>
     <%= link_to "ABOUT", about_path, class: "navlink" %>
     <%= link_to "CONTACT", contact_path, class: "navlink" %>
-    <%= link_to "RESERVATIONS", reservations_path, class: "navlink" %>
+    <%= link_to "RESERVATIONS", reservations_path, id: "navlink_reservations" %>
   </div>
 
   <%# language toggle %>

@@ -30,20 +30,3 @@ h4 {
 p {
   font-size: 18;
 }
-
-.navlink {
-  font-size: 24;
-  color: black;
-  font-family: 'Strait', sans-serif;
-  text-decoration: none;
-
-  &:hover {
-    border-bottom: 1.6px;
-    border-bottom-style: solid;
-    border-color: $logo_red;
-    text-decoration-line: underline;
-    // text-decoration-style: double;
-    text-underline-offset: 8px;
-    text-decoration-color: $logo_red;
-  }
-}
