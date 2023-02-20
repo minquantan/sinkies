@@ -13,7 +13,7 @@
   margin: 0;
 }
 
-.navbar_logo {
+.navbar-logo {
   width: 100px;
   // height: 80px;
 
@@ -22,7 +22,7 @@
   }
 }
 
-.navlink_container {
+.navlink-container {
   display: flex;
   align-items: center;
   gap: 60px;
@@ -47,7 +47,7 @@
   }
 }
 
-#navlink_reservations {
+#navlink-reservations {
   font-size: 24;
   color: black;
   font-family: 'Strait', sans-serif;
@@ -64,7 +64,19 @@
   &:hover {
     border-width: 2px;
     border-style: solid;
-    border-color: $logo_red;
+    border-color: $text_red;
     color: $text_red;
+  }
+}
+
+.language-toggle {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  color: $text_red;
+
+  .inverted-triangle {
+    font-size: 12px;
   }
 }
