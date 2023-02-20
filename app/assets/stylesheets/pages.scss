@@ -2,8 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-// @import "colours";
-// @import "fonts";
-// p {
-//   font-size: 300;
-// }
+#home-background {
+  height: 100vh;
+  background-image: asset-url("sumatra_wallpaper_cropped.jpg");
+  background-repeat: repeat;
+  // background-size:cover;
+}

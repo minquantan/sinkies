@@ -9,7 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: $background_green;
   margin: 0;
 }
 
@@ -42,8 +42,9 @@
   text-decoration-color: white;
 
   &:hover {
-    border-color: $logo_red;
-    text-decoration-color: $logo_red;
+    // border-color: $logo_red;
+    // text-decoration-color: $logo_red;
+    color: $text_red;
   }
 }
 
