@@ -3,8 +3,10 @@
 
   <%# image %>
   <div class="navbar-logo">
-    <%= image_tag 'sinkies_logo.png' %>
-  </div>
+    <%= link_to root_path do %>
+      <%= image_tag 'sinkies_logo.png' %>
+    <% end %>
+</div>
 
   <%# navigation links %>
   <div class="navlink-container">
