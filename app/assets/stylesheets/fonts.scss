@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Strait&family=Sulphur+Point&display=swap');
+@import "colors";
+
+h1, h2, h3 {
+  color: $header_red;
+  font-family: 'Strait', sans-serif;
+};
+
+h1 {
+  font-size: 96px;
+}
+
+h2 {
+  font-size: 64px;
+};
+
+h3 {
+  font-size: 36px;
+};
+
+h4, p {
+  color: $text_red;
+  font-family: 'Sulphur Point', sans-serif;
+};
+
+h4 {
+  font-size: 24;
+}
+
+p {
+  font-size: 18;
+}

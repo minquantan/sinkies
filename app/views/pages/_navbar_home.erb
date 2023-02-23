@@ -1,0 +1,25 @@
+<%# navbar %>
+<div class="navbar navbar-home-background-color">
+
+  <%# image %>
+  <div class="navbar-logo">
+    <%= image_tag 'sinkies_logo.png' %>
+  </div>
+
+  <%# navigation links %>
+  <div class="navlink-container">
+    <%= link_to "MENU", menu_path, class: "navlink" %>
+    <%= link_to "SPACE", space_path, class: "navlink" %>
+    <%= link_to "PROMOTION", promotion_path, class: "navlink" %>
+    <%= link_to "ABOUT", about_path, class: "navlink" %>
+    <%= link_to "CONTACT", contact_path, class: "navlink" %>
+    <%= link_to "RESERVATIONS", reservations_path, id: "navlink-reservations" %>
+  </div>
+
+  <%# language toggle %>
+  <div class="language-toggle">
+    <p>日本語 </p>
+    <i class="fa-solid fa-caret-down inverted-triangle"></i>
+  </div>
+
+</div>

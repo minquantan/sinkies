@@ -1,0 +1,91 @@
+@import "colors";
+
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar {
+  background-color: white;
+
+}
+
+.navbar-home {
+  background-color: $background_green;
+}
+
+.navbar-logo {
+  width: 100px;
+  // height: 80px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.navlink-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  // justify-content: space-between;
+}
+
+.navlink {
+  font-size: 24;
+  color: black;
+  font-family: 'Strait', sans-serif;
+  text-decoration: none;
+  border-bottom: 1.6px;
+  border-bottom-style: solid;
+  border-bottom-color: white;
+  text-decoration-line: underline;
+  text-underline-offset: 8px;
+  text-decoration-color: white;
+
+  &:hover {
+    // border-color: $logo_red;
+    // text-decoration-color: $logo_red;
+    color: $text_red;
+  }
+}
+
+#navlink-reservations {
+  font-size: 24;
+  color: black;
+  font-family: 'Strait', sans-serif;
+  text-decoration: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  // border-width: 1.6px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $navbar_accent_green;
+
+  &:hover {
+    border-width: 2px;
+    border-style: solid;
+    border-color: $text_red;
+    color: $text_red;
+  }
+}
+
+.language-toggle {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  color: $text_red;
+
+  .inverted-triangle {
+    font-size: 12px;
+  }
+}
