@@ -12,6 +12,20 @@
 # t.string "name"
 # t.integer "price"
 # t.text "description"
+puts 'seeding is commencing you coomer'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts 'seeding drinks you wanker'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+
+drinks = []
 
 drink_names = [
   'Teh', 'Teh-C', 'Teh-O', 'Teh Halia', 'Kopi', 'Kopi-C', 'Kopi-O', 'Kopi "Sinkies Split"',
@@ -36,6 +50,18 @@ drink_descriptions = [
   "Warren's  favourite beverage",
   'World Acclaimed lager'
 ]
+
+drink_names.zip(drink_prices, drink_descriptions).each do |zip|
+  Drink.create(menu_category: 'drinks', name: zip[0], price: zip[1], description: zip[2])
+  puts "the number of drinks in your database is #{Drink.count}"
+end
+
+Drink.all.each do |drink|
+  puts drink.name
+  puts drink.price
+  puts drink.description
+  puts "----------------------------------------------------------------------------------"
+end
 
 # seed details for foods
 # t.string "menu_category"
