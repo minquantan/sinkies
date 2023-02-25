@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_23_144058) do
+ActiveRecord::Schema.define(version: 2023_02_25_084133) do
 
   create_table "drinks", force: :cascade do |t|
     t.string "menu_category"
@@ -35,14 +35,8 @@ ActiveRecord::Schema.define(version: 2023_02_23_144058) do
     t.string "name"
     t.integer "price"
     t.text "description"
-    t.integer "food_id"
-    t.integer "drink_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["drink_id"], name: "index_set_meals_on_drink_id"
-    t.index ["food_id"], name: "index_set_meals_on_food_id"
   end
 
-  add_foreign_key "set_meals", "drinks"
-  add_foreign_key "set_meals", "foods"
 end
