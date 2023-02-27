@@ -1,10 +1,46 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import 'colors';
+
 
 #home-background {
   height: 100vh;
   background-image: asset-url("sumatra_wallpaper_cropped.jpg");
   background-repeat: repeat;
   // background-size:cover;
+}
+
+.page-intro {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 200px;
+  padding-left: 60px;
+  padding-right: 60px;
+  align-items: center;
+  gap: 120px;
+
+  h1 {
+    margin: 0;
+  }
+
+  h3 {
+    margin: 0;
+    color: $text_red;
+  }
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 1068px;
+  justify-content: center;
+}
+
+.menu-categories {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
 }
