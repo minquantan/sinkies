@@ -26,3 +26,7 @@
   </div>
 
 </div>
+
+<% @photo_array.each do |photo| %>
+  <li><%= image_tag(photo) %></li>
+<% end %>

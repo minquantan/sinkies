@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
 
 # seed details for drinks
 # t.string "menu_category"
@@ -62,6 +63,54 @@ Drink.all.each do |drink|
   puts drink.description
   puts "----------------------------------------------------------------------------------"
 end
+
+puts "now attaching photos to drinks, you tosser"
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+
+drink_photos = [
+  ['app/assets/images/seed_images/drinks/teh1.png', 'app/assets/images/seed_images/drinks/teh2.png'],
+  ['app/assets/images/seed_images/drinks/teh-c-1.png', 'app/assets/images/seed_images/drinks/teh-c-2.png'],
+  ['app/assets/images/seed_images/drinks/teh-o-1.png', 'app/assets/images/seed_images/drinks/teh-o-1.png'],
+  ['app/assets/images/seed_images/drinks/teh-halia-1.png', 'app/assets/images/seed_images/drinks/teh-halia-2.png'],
+  ['app/assets/images/seed_images/drinks/kopi1.png', 'app/assets/images/seed_images/drinks/kopi2.png'],
+  ['app/assets/images/seed_images/drinks/kopi-c-1.png', 'app/assets/images/seed_images/drinks/kopi-c-2.png'],
+  ['app/assets/images/seed_images/drinks/kopi-o-1.png', 'app/assets/images/seed_images/drinks/kopi-o-2.png'],
+  ['app/assets/images/seed_images/drinks/kopi-sinkies-split-1.png', 'app/assets/images/seed_images/drinks/kopi-sinkies-split-2.png'],
+  ['app/assets/images/seed_images/drinks/lime-juice-1.png', 'app/assets/images/seed_images/drinks/lime-juice-2.png'],
+  ['app/assets/images/seed_images/drinks/milo1.png', 'app/assets/images/seed_images/drinks/milo2.png'],
+  ['app/assets/images/seed_images/drinks/cola1.png', 'app/assets/images/seed_images/drinks/cola2.png'],
+  ['app/assets/images/seed_images/drinks/tiger1.png', 'app/assets/images/seed_images/drinks/tiger2.png']
+]
+
+drink_and_picture_zip = Drink.all.zip(drink_photos)
+
+drink_and_picture_zip.each do |zip|
+  photo1 = URI.open(zip[1][0])
+  photo2 = URI.open(zip[1][1])
+  zip[0].photos.attach(io: photo1, filename: "#{zip[0].name} 1 png", content_type: 'image/png')
+  zip[0].photos.attach(io: photo2, filename: "#{zip[0].name} 2 png", content_type: 'image/png')
+  puts ''
+  puts 'done, next.'
+  puts ''
+end
+
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '---------------------all drinks have pictures now cunt-------------------'
+
+
+
+# file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg")
+# article = Article.new(title: "NES", body: "A great console")
+# article.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# article.save
 
 # seed details for foods
 # t.string "menu_category"
