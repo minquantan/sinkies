@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def menu
     @photo_array = []
-    Food.all.each do |food|
+    SetMeal.all.each do |food|
       food.photos.each do |photo|
         @photo_array << photo
       end
