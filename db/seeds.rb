@@ -61,10 +61,10 @@ Drink.all.each do |drink|
   puts drink.name
   puts drink.price
   puts drink.description
-  puts "----------------------------------------------------------------------------------"
+  puts '----------------------------------------------------------------------------------'
 end
 
-puts "now attaching photos to drinks, you tosser"
+puts 'now attaching photos to drinks, you tosser'
 puts '-------------------------------------------------------------------------'
 puts '-------------------------------------------------------------------------'
 puts '-------------------------------------------------------------------------'
@@ -72,18 +72,18 @@ puts '-------------------------------------------------------------------------'
 puts '-------------------------------------------------------------------------'
 
 drink_photos = [
-  ['app/assets/images/seed_images/drinks/teh1.png', 'app/assets/images/seed_images/drinks/teh2.png'],
+  ['app/assets/images/seed_images/drinks/teh-1.png', 'app/assets/images/seed_images/drinks/teh-2.png'],
   ['app/assets/images/seed_images/drinks/teh-c-1.png', 'app/assets/images/seed_images/drinks/teh-c-2.png'],
   ['app/assets/images/seed_images/drinks/teh-o-1.png', 'app/assets/images/seed_images/drinks/teh-o-1.png'],
   ['app/assets/images/seed_images/drinks/teh-halia-1.png', 'app/assets/images/seed_images/drinks/teh-halia-2.png'],
-  ['app/assets/images/seed_images/drinks/kopi1.png', 'app/assets/images/seed_images/drinks/kopi2.png'],
+  ['app/assets/images/seed_images/drinks/kopi-1.png', 'app/assets/images/seed_images/drinks/kopi-2.png'],
   ['app/assets/images/seed_images/drinks/kopi-c-1.png', 'app/assets/images/seed_images/drinks/kopi-c-2.png'],
   ['app/assets/images/seed_images/drinks/kopi-o-1.png', 'app/assets/images/seed_images/drinks/kopi-o-2.png'],
   ['app/assets/images/seed_images/drinks/kopi-sinkies-split-1.png', 'app/assets/images/seed_images/drinks/kopi-sinkies-split-2.png'],
   ['app/assets/images/seed_images/drinks/lime-juice-1.png', 'app/assets/images/seed_images/drinks/lime-juice-2.png'],
-  ['app/assets/images/seed_images/drinks/milo1.png', 'app/assets/images/seed_images/drinks/milo2.png'],
-  ['app/assets/images/seed_images/drinks/cola1.png', 'app/assets/images/seed_images/drinks/cola2.png'],
-  ['app/assets/images/seed_images/drinks/tiger1.png', 'app/assets/images/seed_images/drinks/tiger2.png']
+  ['app/assets/images/seed_images/drinks/milo-1.png', 'app/assets/images/seed_images/drinks/milo-2.png'],
+  ['app/assets/images/seed_images/drinks/cola-1.png', 'app/assets/images/seed_images/drinks/cola-2.png'],
+  ['app/assets/images/seed_images/drinks/tiger-1.png', 'app/assets/images/seed_images/drinks/tiger-2.png']
 ]
 
 drink_and_picture_zip = Drink.all.zip(drink_photos)
@@ -105,13 +105,6 @@ puts '-------------------------------------------------------------------------'
 puts '-------------------------------------------------------------------------'
 puts '---------------------all drinks have pictures now cunt-------------------'
 
-
-
-# file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg")
-# article = Article.new(title: "NES", body: "A great console")
-# article.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-# article.save
-
 # seed details for foods
 # t.string "menu_category"
 # t.string "name"
@@ -120,15 +113,15 @@ puts '---------------------all drinks have pictures now cunt-------------------'
 
 # ---------------------------------- Main Courses ----------------------------------------
 
-main_course_names [
+main_course_names = [
   'Laksa', 'Laksa Ver. Dry', 'Mee Soto', 'Nasi Lemak', 'Kaya Toast (Full Portion)', 'S4'
 ]
 
-main_course_prices [
+main_course_prices = [
   1200, 1200, 1200, 1600, 800, 2000
 ]
 
-main_course_descriptions [
+main_course_descriptions = [
   'Iconic and beloved in Singapore. A savoury spice and seafood broth balanced with coconut cream.
   Served with rice vermicelli, yellow noodles, and assorted toppings. ',
   'Our signature spiced Laksa noodles tossed in the pan and served dry.',
@@ -141,6 +134,87 @@ main_course_descriptions [
   'Sinkies Specialty Seafood Stew. Salmon, prawns and scallops cooked with Southeast Asian aromatics
   and tomato. Accompanied with bread or rice.'
 ]
+
+main_course_names.zip(main_course_prices, main_course_descriptions).each do |zip|
+  Food.create(menu_category: 'main course', name: zip[0], price: zip[1], description: zip[2])
+  puts "the number of main courses in your database is #{Food.where(menu_category: 'main course').count}"
+end
+
+Food.where(menu_category: 'main course').each do |main_course|
+  puts main_course.name
+  puts main_course.price
+  puts main_course.description
+  puts '----------------------------------------------------------------------------------'
+end
+
+puts 'now attaching photos to maincourses, you weenie'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+puts '-------------------------------------------------------------------------'
+
+main_course_photos = [
+  [
+    'app/assets/images/seed_images/food/main_course/laksa-1.png',
+    'app/assets/images/seed_images/food/main_course/laksa-2.png',
+    'app/assets/images/seed_images/food/main_course/laksa-3.png',
+    'app/assets/images/seed_images/food/main_course/laksa-4.png'
+  ],
+  [
+    'app/assets/images/seed_images/food/main_course/laksa-dry-1.png',
+    'app/assets/images/seed_images/food/main_course/laksa-dry-2.png',
+    'app/assets/images/seed_images/food/main_course/laksa-dry-3.png',
+    'app/assets/images/seed_images/food/main_course/laksa-dry-4.png'
+  ],
+  [
+    'app/assets/images/seed_images/food/main_course/mee-soto-1.png',
+    'app/assets/images/seed_images/food/main_course/mee-soto-2.png',
+    'app/assets/images/seed_images/food/main_course/mee-soto-3.png',
+    'app/assets/images/seed_images/food/main_course/mee-soto-4.png'
+  ],
+  [
+    'app/assets/images/seed_images/food/main_course/kaya-toast-1.png',
+    'app/assets/images/seed_images/food/main_course/kaya-toast-2.png',
+    'app/assets/images/seed_images/food/main_course/kaya-toast-3.png',
+    'app/assets/images/seed_images/food/main_course/kaya-toast-4.png'
+  ],
+  [
+    'app/assets/images/seed_images/food/main_course/nasi-lemak-1.png',
+    'app/assets/images/seed_images/food/main_course/nasi-lemak-2.png',
+    'app/assets/images/seed_images/food/main_course/nasi-lemak-3.png',
+    'app/assets/images/seed_images/food/main_course/nasi-lemak-4.png'
+  ],
+  [
+    'app/assets/images/seed_images/food/main_course/sinkies-stew-1.png',
+    'app/assets/images/seed_images/food/main_course/sinkies-stew-2.png',
+    'app/assets/images/seed_images/food/main_course/sinkies-stew-3.png',
+    'app/assets/images/seed_images/food/main_course/sinkies-stew-4.png'
+  ]
+]
+
+main_courses_and_picture_zip = Food.where(menu_category: 'main course').zip(main_course_photos)
+
+main_courses_and_picture_zip.each do |zip|
+  photo1 = URI.open(zip[1][0])
+  photo2 = URI.open(zip[1][1])
+  photo3 = URI.open(zip[1][2])
+  photo4 = URI.open(zip[1][3])
+  zip[0].photos.attach(io: photo1, filename: "#{zip[0].name} 1 png", content_type: 'image/png')
+  zip[0].photos.attach(io: photo2, filename: "#{zip[0].name} 2 png", content_type: 'image/png')
+  zip[0].photos.attach(io: photo3, filename: "#{zip[0].name} 3 png", content_type: 'image/png')
+  zip[0].photos.attach(io: photo4, filename: "#{zip[0].name} 4 png", content_type: 'image/png')
+  puts ''
+  puts 'done, next.'
+  puts ''
+end
+
+# puts '-------------------------------------------------------------------------'
+# puts '-------------------------------------------------------------------------'
+# puts '-------------------------------------------------------------------------'
+# puts '-------------------------------------------------------------------------'
+# puts '-------------------------------------------------------------------------'
+# puts '---------------------all main courses have pictures now snake-------------------'
 
 # ------------------------------------------ Snacks ------------------------------------------------
 snack_names [

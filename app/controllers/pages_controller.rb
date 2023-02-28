@@ -3,8 +3,8 @@ class PagesController < ApplicationController
 
   def menu
     @photo_array = []
-    Drink.all.each do |drink|
-      drink.photos.each do |photo|
+    Food.all.each do |food|
+      food.photos.each do |photo|
         @photo_array << photo
       end
     end
