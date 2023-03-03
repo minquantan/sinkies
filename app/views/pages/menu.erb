@@ -16,40 +16,42 @@
     </div>
 
     <div class='menu-categories'>
-      <h3>MAIN COURSE</h3>
-      <h3>SNACKS</h3>
-      <h3>DESSERTS</h3>
-      <h3>DRINKS</h3>
-      <h3>SET MEALS</h3>
+      <h3 style="font-size:28px">MAIN COURSE</h3>
+      <h3 style="font-size:28px">SNACKS</h3>
+      <h3 style="font-size:28px">DESSERTS</h3>
+      <h3 style="font-size:28px">DRINKS</h3>
+      <h3 style="font-size:28px">SET MEALS</h3>
     </div>
 
   </div>
 
 </div>
 
-<%# display main courses %>
+<%# container to align all menu cards %>
+<div class="menu-items-container">
 
-<%# div for both image and details %>
-<% @main_courses.each do |main_course| %>
+  <%# div for both image and details %>
+  <% @main_courses.each do |main_course| %>
 
-  <div>
-    <%# image %>
-    <div>
-      <%= main_course.photos.first %>
-    </div>
-    <%# details %>
-    <div>
-      <%# name and price %>
-      <div>
-        <h3><%= main_course.name %></h3>
-        <h4>¥<%=main_course.price%></h4>
+    <div class="menu-card-container">
+      <%# image %>
+      <div class="menu-image-container">
+        <%= image_tag(main_course.photos.first) %>
       </div>
-      <%# description %>
-      <div>
-        <p><%= main_course.description %></p>
+      <%# details %>
+      <div class="menu-card-description-container">
+        <%# name and price %>
+        <div class="menu-card-title-container">
+          <h3><%= main_course.name %></h3>
+          <h4>¥<%=main_course.price%></h4>
+        </div>
+        <%# description %>
+        <div>
+          <p><%= main_course.description %></p>
+        </div>
       </div>
     </div>
-  </div>
 
+  <% end %>
 
-<% end %>
+</div>
