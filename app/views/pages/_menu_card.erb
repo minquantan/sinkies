@@ -1,0 +1,23 @@
+<%# div for both image and details %>
+  <% menu_items.each do |menu_item| %>
+
+    <div class="menu-card-container">
+      <%# image %>
+      <div class="menu-image-container">
+        <%= cl_image_tag(menu_item.photos.first.key) %>
+      </div>
+      <%# details %>
+      <div class="menu-card-description-container">
+        <%# name and price %>
+        <div class="menu-card-title-container">
+          <h3><%= menu_item.name %></h3>
+          <h4>¥<%=menu_item.price%></h4>
+        </div>
+        <%# description %>
+        <div>
+          <p><%= menu_item.description %></p>
+        </div>
+      </div>
+    </div>
+
+  <% end %>

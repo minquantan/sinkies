@@ -29,29 +29,9 @@
 
 <%# container to align all menu cards %>
 <div class="menu-items-container">
-
-  <%# div for both image and details %>
-  <% @main_courses.each do |main_course| %>
-
-    <div class="menu-card-container">
-      <%# image %>
-      <div class="menu-image-container">
-        <%= cl_image_tag(main_course.photos.first.key) %>
-      </div>
-      <%# details %>
-      <div class="menu-card-description-container">
-        <%# name and price %>
-        <div class="menu-card-title-container">
-          <h3><%= main_course.name %></h3>
-          <h4>¥<%=main_course.price%></h4>
-        </div>
-        <%# description %>
-        <div>
-          <p><%= main_course.description %></p>
-        </div>
-      </div>
-    </div>
-
-  <% end %>
+  <%= render 'menu_card', menu_items: @main_courses %>
+  <%= render 'menu_card', menu_items: @snacks %>
+  <%= render 'menu_card', menu_items: @desserts %>
+  <%= render 'menu_card', menu_items: @set_meals %>
 
 </div>
