@@ -183,16 +183,16 @@ main_course_photos = [
     'app/assets/images/seed_images/food/main_course/mee-soto-4.png'
   ],
   [
-    'app/assets/images/seed_images/food/main_course/kaya-toast-1.png',
-    'app/assets/images/seed_images/food/main_course/kaya-toast-2.png',
-    'app/assets/images/seed_images/food/main_course/kaya-toast-3.png',
-    'app/assets/images/seed_images/food/main_course/kaya-toast-4.png'
-  ],
-  [
     'app/assets/images/seed_images/food/main_course/nasi-lemak-1.png',
     'app/assets/images/seed_images/food/main_course/nasi-lemak-2.png',
     'app/assets/images/seed_images/food/main_course/nasi-lemak-3.png',
     'app/assets/images/seed_images/food/main_course/nasi-lemak-4.png'
+  ],
+  [
+    'app/assets/images/seed_images/food/main_course/kaya-toast-1.png',
+    'app/assets/images/seed_images/food/main_course/kaya-toast-2.png',
+    'app/assets/images/seed_images/food/main_course/kaya-toast-3.png',
+    'app/assets/images/seed_images/food/main_course/kaya-toast-4.png'
   ],
   [
     'app/assets/images/seed_images/food/main_course/sinkies-stew-1.png',

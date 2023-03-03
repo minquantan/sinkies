@@ -36,7 +36,7 @@
     <div class="menu-card-container">
       <%# image %>
       <div class="menu-image-container">
-        <%= image_tag(main_course.photos.first) %>
+        <%= cl_image_tag(main_course.photos.first.key) %>
       </div>
       <%# details %>
       <div class="menu-card-description-container">

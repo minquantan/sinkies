@@ -10,7 +10,12 @@ class PagesController < ApplicationController
   end
 
   def space; end
-  def promotion; end
+
+  def promotion
+    @dry_laksa = Food.find(2)
+    @laksa = Food.find(1)
+  end
+
   def about; end
   def contact; end
   def reservations; end
