@@ -27,6 +27,29 @@
 
 </div>
 
-<% @photo_array.each do |photo| %>
-  <li><%= image_tag(photo) %></li>
+<%# display main courses %>
+
+<%# div for both image and details %>
+<% @main_courses.each do |main_course| %>
+
+  <div>
+    <%# image %>
+    <div>
+      <%= main_course.photos.first %>
+    </div>
+    <%# details %>
+    <div>
+      <%# name and price %>
+      <div>
+        <h3><%= main_course.name %></h3>
+        <h4>¥<%=main_course.price%></h4>
+      </div>
+      <%# description %>
+      <div>
+        <p><%= main_course.description %></p>
+      </div>
+    </div>
+  </div>
+
+
 <% end %>
