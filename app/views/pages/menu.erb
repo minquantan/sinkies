@@ -1,45 +1,51 @@
 <%= render "navbar" %>
 
-<%# Menu page heading and item categories %>
-<div class='page-intro'>
+<%# div for scrolling javascript event %>
+<div
+  data-controller="menu-scrolling"
+  data-action="scroll@window->menu-scrolling#colors">
+  <%# Menu page heading and item categories %>
+  <div class='page-intro'>
 
-  <%# Page heading %>
-  <div data-controller="hello">
-    <h1 data-hello-target="output">MENU</h1>
-  </div>
-
-  <%# Menu categories %>
-  <div class='intro-content'>
-
+    <%# Page heading %>
     <div>
-      <h3>CATEGORIES</h3>
+      <h1>MENU</h1>
     </div>
 
-    <div class='menu-categories'>
-      <h3 style="font-size:28px">MAIN COURSE</h3>
-      <h3 style="font-size:28px">SNACKS</h3>
-      <h3 style="font-size:28px">DESSERTS</h3>
-      <h3 style="font-size:28px">DRINKS</h3>
-      <h3 style="font-size:28px">SET MEALS</h3>
+    <%# Menu categories %>
+    <div class='intro-content'>
+
+      <div>
+        <h3>CATEGORIES</h3>
+      </div>
+
+      <div class='menu-categories'>
+        <h3 style="font-size:28px">MAIN COURSE</h3>
+        <h3 style="font-size:28px">SNACKS</h3>
+        <h3 style="font-size:28px">DESSERTS</h3>
+        <h3 style="font-size:28px">DRINKS</h3>
+        <h3 style="font-size:28px">SET MEALS</h3>
+      </div>
+
     </div>
 
   </div>
 
-</div>
+  <%# container to align all menu cards %>
+  <div class="menu-items-container main-courses-container">
+    <%= render 'menu_card', menu_items: @main_courses %>
+  </div>
+  <div class="menu-items-container snacks-container">
+    <%= render 'menu_card', menu_items: @snacks %>
+  </div>
+  <div class="menu-items-container desserts-container">
+    <%= render 'menu_card', menu_items: @desserts %>
+  </div>
+  <div class="menu-items-container set-meals-container">
+    <%= render 'menu_card', menu_items: @set_meals %>
+  </div>
+  <div class="menu-items-container drinks-container">
+    <%= render 'menu_card', menu_items: @drinks %>
+  </div>
 
-<%# container to align all menu cards %>
-<div class="menu-items-container main-courses-container">
-  <%= render 'menu_card', menu_items: @main_courses %>
-</div>
-<div class="menu-items-container snacks-container">
-  <%= render 'menu_card', menu_items: @snacks %>
-</div>
-<div class="menu-items-container desserts-container">
-  <%= render 'menu_card', menu_items: @desserts %>
-</div>
-<div class="menu-items-container set-meals-container">
-  <%= render 'menu_card', menu_items: @set_meals %>
-</div>
-<div class="menu-items-container drinks-container">
-  <%= render 'menu_card', menu_items: @drinks %>
 </div>
