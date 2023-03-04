@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem "font-awesome-sass", "~> 6.3.0"
 gem "cloudinary"
 gem "dotenv-rails", groups: [:development, :test]
+gem "stimulus-rails"
 
 
 

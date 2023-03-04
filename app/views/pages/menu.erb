@@ -4,8 +4,8 @@
 <div class='page-intro'>
 
   <%# Page heading %>
-  <div>
-    <h1>MENU</h1>
+  <div data-controller="hello">
+    <h1 data-hello-target="output">MENU</h1>
   </div>
 
   <%# Menu categories %>
@@ -28,15 +28,18 @@
 </div>
 
 <%# container to align all menu cards %>
-<div class="menu-items-container">
+<div class="menu-items-container main-courses-container">
   <%= render 'menu_card', menu_items: @main_courses %>
 </div>
-<div class="menu-items-container">
+<div class="menu-items-container snacks-container">
   <%= render 'menu_card', menu_items: @snacks %>
 </div>
-<div class="menu-items-container">
+<div class="menu-items-container desserts-container">
   <%= render 'menu_card', menu_items: @desserts %>
 </div>
-<div class="menu-items-container">
+<div class="menu-items-container set-meals-container">
   <%= render 'menu_card', menu_items: @set_meals %>
+</div>
+<div class="menu-items-container drinks-container">
+  <%= render 'menu_card', menu_items: @drinks %>
 </div>
