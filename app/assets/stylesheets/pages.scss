@@ -64,8 +64,11 @@
 
 .menu-items-container {
   width: 100%;
-  display: grid;
-  flex-direction: row;
-  grid-template-columns: 20% 20% 20% 20%;
+  // display: grid;
+  // grid-template-columns: 21% 21% 21% 21%;
+  // gap: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 65px;
   margin-bottom: 60px;
 }

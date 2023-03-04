@@ -3,7 +3,7 @@
 <%# div for scrolling javascript event %>
 <div class="page-container"
   data-controller="menu-scrolling"
-  data-action="scroll@window->menu-scrolling#colors">
+  >
   <%# Menu page heading and item categories %>
   <div class='page-intro'>
 
@@ -19,7 +19,10 @@
         <h3>CATEGORIES</h3>
       </div>
 
-      <div id='categories' class='menu-categories'>
+      <div
+      id='categories' class='menu-categories'
+      data-action="scroll@window->menu-scrolling#colors"
+      >
         <h3 style="font-size:28px">MAIN COURSE</h3>
         <h3 style="font-size:28px">SNACKS</h3>
         <h3 style="font-size:28px">DESSERTS</h3>
@@ -31,21 +34,24 @@
 
   </div>
 
-  <div id="menu-displays">
+  <div
+    id="menu-displays"
+    data-action="scroll@window->menu-scrolling#colors"
+  >
     <%# container to align all menu cards %>
-    <div id="main-courses-container" class="menu-items-container">
+    <div id="mains" class="menu-items-container">
       <%= render 'menu_card', menu_items: @main_courses %>
     </div>
-    <div id="snacks-container" class="menu-items-container">
+    <div id="snacks" class="menu-items-container">
       <%= render 'menu_card', menu_items: @snacks %>
     </div>
-    <div id="desserts-container" class="menu-items-container">
+    <div id="desserts" class="menu-items-container">
       <%= render 'menu_card', menu_items: @desserts %>
     </div>
-    <div id="set-meals-container" class="menu-items-container">
+    <div id="sets" class="menu-items-container">
       <%= render 'menu_card', menu_items: @set_meals %>
     </div>
-    <div id="drinks-container" class="menu-items-container">
+    <div id="drinks" class="menu-items-container">
       <%= render 'menu_card', menu_items: @drinks %>
     </div>
   </div>
