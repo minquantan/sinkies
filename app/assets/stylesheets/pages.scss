@@ -12,15 +12,19 @@
 }
 
 .page-container {
-  width: 100%;
-  margin-right: 60px;
-  margin-left: 60px;
+  width: 92%;
+  margin: auto;
+  // margin-right: 60px;
+  // margin-left: 60px;
+
+  // .page-intro {
+  //   width: 100%;
+  // }
 }
 
 .page-intro {
   display: flex;
   flex-direction: row;
-  width: inherit;
   height: 120px;
   margin-top: 20px;
   align-items: center;
