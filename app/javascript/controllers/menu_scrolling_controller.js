@@ -7,65 +7,49 @@ export default class extends Controller {
     console.log("the menu-scrolling controller is up")
   }
 
-
-
   colors() {
-    const mains = document.getElementById("mains");
     const snacks = document.getElementById("snacks");
-    const desserts = document.getElementById("desserts");
-    const sets = document.getElementById("sets");
-    const drinks = document.getElementById("drinks");
-
-    const mainsRect = mains.getBoundingClientRect();
     const snacksRect = snacks.getBoundingClientRect();
-    const dessertsRect = desserts.getBoundingClientRect();
-    const setsRect = sets.getBoundingClientRect();
-    const drinksRect = drinks.getBoundingClientRect();
-
-    const catMain = document.getElementById("cat-main");
     const catSnack = document.getElementById("cat-snack");
-    const catDessert = document.getElementById("cat-dessert");
-    const catDrink = document.getElementById("cat-drink");
-    const catSet = document.getElementById("cat-set");
 
+    const snackImages = snacks.querySelectorAll('.menu-image-container');
 
-    // const clientHeight = document.documentElement.clientHeight;
-    // const mainsHeight = mains.getBoundingClientRect().y;
-    // console.log(clientHeight);
-    // console.log(mainsHeight);
+    let imageIsVisibleArray = []
+    snackImages.forEach((image)=>{
+      // get the coordinates of the menu item picture
+      const imageRect = image.getBoundingClientRect();
 
-    // this means that we are scrolling down, and therefore away from the mains section.
+      /* set a variable that gives true or false as to whether the picture's coordinates are within the viewport, ie
+      picture is visible */
+      var is_visible = imageRect.top >= 0 && imageRect.left >= 0 &&
+      imageRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      imageRect.right <= (window.innerWidth || document.documentElement.clientWidth);
 
-
-
-    // if (clientHeight > mainsTop && clientHeight > mainsBottom) {
-    //   console.log(clientHeight)
-      console.log(mainsRect.top)
-      // console.log(mainsRect.bottom)
-    // }
-
-    if (251 > mainsRect.top &&
-      mainsRect.top > -909 &&
-      1516 > mainsRect.bottom &&
-      mainsRect.bottom > 356){
-        console.log("the main courses are in the viewport you nigga worm!");
-        // debugger
-        catMain.classList.add("red-active");
-        console.log(catMain.innerText)
-
-
+      // push the result of whether picture is visible into array
+      imageIsVisibleArray.push(is_visible);
+    })
+    // check whether there is any true in the array. if yes then change the color. if no then remove the color.
+    console.log(imageIsVisibleArray);
+    if (imageIsVisibleArray.includes(true)) {
+      catSnack.classList.add('red-active');
     } else {
-      console.log("you refuse to work?!");
+      catSnack.classList.remove('red-active');
     }
+/* CHANGE FROM THE IMAGE TO THE NAME OF DISH FOR BETTER RESULTS */
 
-
-
-    // at the top of the main courses
-    // 250.66250610351562 top value
-    // 1515.6625061035156 bottom value
-
-    // at the bottom of the main courses
-    // -908.5375366210938 top value
-    // 356.46246337890625 bottom value
   }
 }
+              // const mains = document.getElementById("mains");
+              // const desserts = document.getElementById("desserts");
+              // const sets = document.getElementById("sets");
+              // const drinks = document.getElementById("drinks");
+
+              // const mainsRect = mains.getBoundingClientRect();
+              // const dessertsRect = desserts.getBoundingClientRect();
+              // const setsRect = sets.getBoundingClientRect();
+              // const drinksRect = drinks.getBoundingClientRect();
+
+              // const catMain = document.getElementById("cat-main");
+              // const catDessert = document.getElementById("cat-dessert");
+              // const catDrink = document.getElementById("cat-drink");
+              // const catSet = document.getElementById("cat-set");

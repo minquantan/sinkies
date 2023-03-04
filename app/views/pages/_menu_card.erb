@@ -3,7 +3,9 @@
 
     <div class="menu-card-container">
       <%# image %>
-      <div class="menu-image-container">
+      <div
+      data-action="scroll@window->menu-scrolling#colors"
+      class="menu-image-container">
         <%= cl_image_tag(menu_item.photos.first.key) %>
       </div>
       <%# details %>
