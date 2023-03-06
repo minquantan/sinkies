@@ -32,6 +32,7 @@ p {
   font-size: 18;
 }
 
-.red-active {
-  color: $logo_red;
+.red {
+  color: $logo_red !important;
+  font-size: 100px;
 }
