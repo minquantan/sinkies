@@ -58,9 +58,16 @@
   display: flex;
   flex-direction:row;
   justify-content: space-between;
+  pointer-events: none;
 
   h3 {
     font-size: 28px;
+    pointer-events: auto;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $navbar_accent_green;
+      cursor: grab;
+    }
   }
 }
 
