@@ -11,31 +11,50 @@ export default class extends Controller {
     const snacks = document.getElementById("snacks");
     const snacksRect = snacks.getBoundingClientRect();
     const catSnack = document.getElementById("cat-snack");
+    const snackTitles = snacks.querySelectorAll('.menu-card-title-container');
 
-    const snackImages = snacks.querySelectorAll('.menu-image-container');
+    const menuCategories = document.querySelectorAll('#categories h3');
 
-    let imageIsVisibleArray = []
-    snackImages.forEach((image)=>{
-      // get the coordinates of the menu item picture
-      const imageRect = image.getBoundingClientRect();
+    // check if there are any menu categories that are already highlighted as active
+    const activeCategories = [];
+    menuCategories.forEach((category) => {
+      activeCategories.push(category.classList.contains('red-active'));
+    })
 
-      /* set a variable that gives true or false as to whether the picture's coordinates are within the viewport, ie
-      picture is visible */
-      var is_visible = imageRect.top >= 0 && imageRect.left >= 0 &&
-      imageRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      imageRect.right <= (window.innerWidth || document.documentElement.clientWidth);
+    function isTrue(item) {
+      return item === true;
+    }
+
+    const areActive = activeCategories.some(isTrue)
+
+
+
+    let titleIsVisibleArray = []
+    snackTitles.forEach((title)=>{
+      // get the coordinates of the menu item's name
+      const titleRect = title.getBoundingClientRect();
+
+      /* set a variable that gives true or false as to whether the coordinates are within the viewport */
+      var is_visible = titleRect.top >= 0 && titleRect.left >= 0 &&
+      titleRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      titleRect.right <= (window.innerWidth || document.documentElement.clientWidth);
 
       // push the result of whether picture is visible into array
-      imageIsVisibleArray.push(is_visible);
+      titleIsVisibleArray.push(is_visible);
     })
+
     // check whether there is any true in the array. if yes then change the color. if no then remove the color.
-    console.log(imageIsVisibleArray);
-    if (imageIsVisibleArray.includes(true)) {
+    console.log(titleIsVisibleArray);
+    if (titleIsVisibleArray.includes(true) && areActive != true ) {
       catSnack.classList.add('red-active');
     } else {
       catSnack.classList.remove('red-active');
     }
-/* CHANGE FROM THE IMAGE TO THE NAME OF DISH FOR BETTER RESULTS */
+/* only go red if every other category is not red */
+
+    console.log(menuCategories);
+    console.log(activeCategories);
+    console.log(areActive);
 
   }
 }
