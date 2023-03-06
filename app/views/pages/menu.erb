@@ -22,30 +22,34 @@
       </div> %>
 
       <div id='categories' class='menu-categories'
-        data-controller="go"
         data-action="scroll@window->category-highlight#colors">
         <h3
           id='cat-main' style="font-size:28px" class="link-to-mains"
+          data-controller="go"
           data-action="scroll@window->category-highlight#colors click->go#goToSection">
           MAIN COURSE
         </h3>
         <h3
           id='cat-snack' class="link-to-snacks" style="font-size:28px"
+          data-controller="go"
           data-action="scroll@window->category-highlight#colors click->go#goToSection">
           SNACKS
         </h3>
         <h3
           id='cat-dessert' class="link-to-desserts" style="font-size:28px"
+          data-controller="go"
           data-action="scroll@window->category-highlight#colors click->go#goToSection">
           DESSERTS
         </h3>
         <h3
           id='cat-set' class="link-to-sets" style="font-size:28px"
+          data-controller="go"
           data-action="scroll@window->category-highlight#colors click->go#goToSection">
           SET MEALS
         </h3>
         <h3
           id='cat-drink' class="link-to-drinks" style="font-size:28px"
+          data-controller="go"
           data-action="scroll@window->category-highlight#colors click->go#goToSection">
           DRINKS
         </h3>
@@ -72,7 +76,7 @@
     <div id="sets" class="menu-items-container gate-to-sets">
       <%= render 'menu_card', menu_items: @set_meals %>
     </div>
-    <div id="drinks" class="menu-items-container drinks">
+    <div id="drinks" class="menu-items-container gate-to-drinks">
       <%= render 'menu_card', menu_items: @drinks %>
     </div>
   </div>
