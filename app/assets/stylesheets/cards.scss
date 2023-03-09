@@ -20,6 +20,10 @@
 
   // ultra thin edge
   // box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 .menu-image-container {
