@@ -8,10 +8,10 @@ export default class extends Controller {
   }
 
   popout () {
-    const menuItemsContainer = document.getElementsByClassName("menu-items-container");
-    const menuCardContainer = document.getElementsByClassName("menu-card-container");
+    // get the name
+    const selectedName = this.element.querySelector('h3').innerText;
+    console.log(selectedName);
 
-    console.log(this.element.innerHTML);
 
   }
 }
