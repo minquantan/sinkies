@@ -1,40 +1,54 @@
   <%# div for enlarged menu card %>
   <%# card frame %>
-  <div>
+  <div id = "big-card-frame">
 
-    <%# left side %>
-    <div>
+    <div id = "heading-holder">
+
       <%# image selection %>
-      <div>
-
+      <div class = "thumbnail-holder">
         <% if menu_item.photos.attached? %>
-        <% menu_item.photos.each do |photo| %>
-          <div style="width:100px height:100px">
-            <%= cl_image_tag(photo.key)%>
-          </div>
+          <% menu_item.photos.each do |photo| %>
+            <div class="thumbnail-image">
+              <%= cl_image_tag(photo.key)%>
+            </div>
+          <% end %>
         <% end %>
-
       </div>
+
+      <%# title & Price %>
+      <div id = "big-name-price">
+        <h3><%= menu_item.name.upcase %></h3>
+        <h3>¥<%= menu_item.price %></h3>
+      </div>
+
+    </div>
+
+    <div id = "content-holder">
+
       <%# big image %>
       <div id="big-card-main-image">
-        <%=  %>
+        <div class = "shadow">
+          <%= cl_image_tag(menu_item.photos.first.key) %>
+        </div>
       </div>
+
+      <div id = "big-card-details">
+        <%# description %>
+        <div>
+          <p><%= menu_item.description %></p>
+        </div>
+        <%# back button %>
+        <div>
+          <p>BACK TO MENU</p>
+          <div>
+            <img src="app/assets/images/mascott_stretch.png" alt="back button">
+          </div>
+        </div>
+
+      </div>
+
+
     </div>
 
-    <%# right side %>
-    <div>
-      <%# title %>
-      <div>
-      </div>
-      <%# calories %>
-      <div>
-      </div>
-      <%# description %>
-      <div>
-      </div>
-      <%# back button %>
-      <div>
-      </div>
-    </div>
 
   </div>
