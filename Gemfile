@@ -31,7 +31,7 @@ gem "font-awesome-sass", "~> 6.3.0"
 gem "cloudinary"
 gem "dotenv-rails", groups: [:development, :test]
 gem "stimulus-rails"
-
+gem 'jquery-ui-rails'
 
 
 
