@@ -11,9 +11,10 @@ export default class extends Controller {
 
   changeImage() {
     // var imgs = document.querySelectorAll('.slider img');
+    // var dots = document.querySelectorAll('.dot');
     var dish = this.element.parentElement.parentElement
     var imgs = dish.querySelectorAll('.slider img');
-    var dots = document.querySelectorAll('.dot');
+    var dots = this.element.parentElement.querySelectorAll('.dot');
     var currentImg = 0;
 
     let n = 0;
@@ -36,13 +37,14 @@ export default class extends Controller {
     function changeSlide(n) {
       for (var i = 0; i < imgs.length; i++) { // reset
         imgs[i].style.opacity = 0;
-        dots[i].className = dots[i].className.replace(' active', '');
+        dots[i].className = dots[i].className.replace('active', '');
       }
 
       currentImg = n;
 
       imgs[currentImg].style.opacity = 1;
-      dots[currentImg].className += ' active';
+      // dots[currentImg].className += 'active';
+      dots[currentImg].classList.add("active");
 
 
     }
