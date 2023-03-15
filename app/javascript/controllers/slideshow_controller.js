@@ -10,7 +10,9 @@ export default class extends Controller {
 
 
   changeImage() {
-    var imgs = document.querySelectorAll('.slider img');
+    // var imgs = document.querySelectorAll('.slider img');
+    var dish = this.element.parentElement.parentElement
+    var imgs = dish.querySelectorAll('.slider img');
     var dots = document.querySelectorAll('.dot');
     var currentImg = 0;
 
