@@ -4,7 +4,7 @@ export default class extends Controller {
 
   connect() {
     // this.outputTarget.textContent = 'Hello, Stimulus!'
-    console.log("the expansion begins now");
+    // console.log("the expansion begins now");
   }
 
   expandModal() {
@@ -23,5 +23,19 @@ export default class extends Controller {
     const dishWriting = this.element.querySelectorAll("p")
     const dishDescription = dishWriting[0].innerText;
     const dishAdvice = dishWriting[1].innerText;
+
+    // Get the place to insert modal details
+    const insertHere = document.getElementById("menu-item-modal");
+
+    // Set html to be inserted
+    const toInsert =
+
+
+
+
+    // insertHere.innerHTML = "<p>BACK TO MENU</p><p>BACK TO MENU</p>"
+    insertHere.innerHTML = "<p>BACK TO MENU</p><p>BACK TO MENU</p>"
+
+
   }
 }

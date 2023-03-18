@@ -4,17 +4,17 @@ export default class extends Controller {
 
   connect() {
     // this.outputTarget.textContent = 'Hello, Stimulus!'
-    // console.log("let's change the slide image")
+    console.log("MODAL SLIDESHOW HERE WE GO")
+
 
   }
 
-
   changeImage() {
-    // var imgs = document.querySelectorAll('.slider img');
-    // var dots = document.querySelectorAll('.dot');
-
-    var dish = this.element.parentElement.parentElement
+    // console.log("image was clicked");
+    var dish = this.element.parentElement.parentElement.parentElement;
     var imgs = dish.querySelectorAll('.slider img');
+    console.log(imgs);
+
     var dots = this.element.parentElement.querySelectorAll('.dot');
     var currentImg = 0;
 
@@ -34,6 +34,8 @@ export default class extends Controller {
     }
 
     changeSlide(n);
+    // console.log(n)
+    // console.log(imgs[n])
 
     function changeSlide(n) {
       for (var i = 0; i < imgs.length; i++) { // reset
@@ -49,9 +51,6 @@ export default class extends Controller {
 
 
     }
-
-    console.log("changeSlide method is accessed")
-
   }
 
 }

@@ -14,6 +14,6 @@ export default class extends Controller {
 
   connect() {
     // this.outputTarget.textContent = 'Hello, Stimulus!'
-    console.log("work you retarded git")
+    // console.log("work you retarded git")
   }
 }

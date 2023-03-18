@@ -6,7 +6,7 @@ export default class extends Controller {
   connect() {
     const catMain = document.getElementById("cat-main");
     catMain.classList.add('red');
-    console.log("the menu-scrolling controller is up")
+    // console.log("the menu-scrolling controller is up")
   }
 
   colors() {
