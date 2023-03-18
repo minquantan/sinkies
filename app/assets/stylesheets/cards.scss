@@ -58,8 +58,12 @@
 .menu-card-description-container {
   padding-left: 25px;
   padding-right: 25px;
+  padding-bottom: 25px;
 }
 
+.description-and-advice {
+  overflow: hidden;
+}
 
 /* ---------------------------------------------BIG MENU CARD-------------------------------------------------------- */
 #big-card-frame {

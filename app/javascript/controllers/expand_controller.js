@@ -1,6 +1,4 @@
 import { Controller } from "stimulus"
-import { csrfToken } from "@rails/ujs"
-import JsonpTemplatePlugin from "webpack/lib/web/JsonpTemplatePlugin";
 
 export default class extends Controller {
 
@@ -9,5 +7,21 @@ export default class extends Controller {
     console.log("the expansion begins now");
   }
 
+  expandModal() {
+    console.log(this.element)
 
+    // Get all of the picture urls
+    const images = this.element.querySelectorAll("img");
+    const img1 = images[0].currentSrc;
+    const img2 = images[1].currentSrc;
+    const img3 = images[2].currentSrc;
+    const img4 = images[3].currentSrc;
+
+    // Get the Name, Price, Description, and Advice
+    const dishName = this.element.querySelector("h3").innerText;
+    const dishPrice = this.element.querySelector("h4").innerText;
+    const dishWriting = this.element.querySelectorAll("p")
+    const dishDescription = dishWriting[0].innerText;
+    const dishAdvice = dishWriting[1].innerText;
+  }
 }

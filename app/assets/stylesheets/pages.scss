@@ -34,6 +34,7 @@
   position: sticky;
   top: 0;
   background-color: $background_green;
+  z-index: 3;
 
   h1 {
     margin: 0;
@@ -52,7 +53,9 @@
   margin-top: 15px;
   width: 60%;
   justify-content: center;
+
 }
+
 
 .menu-categories {
   display: flex;

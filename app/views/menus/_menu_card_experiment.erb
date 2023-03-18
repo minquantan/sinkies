@@ -1,7 +1,9 @@
 <%# div for both image and details %>
   <% menu_items.each do |menu_item| %>
 
-    <div class="menu-card-container">
+    <div class="menu-card-container"
+    data-controller="expand"
+    data-action="click->expand#expandModal">
       <%# image %>
       <div
       data-action="scroll@window->menu-scrolling#colors"
@@ -40,8 +42,10 @@
           <h4>¥<%=menu_item.price%></h4>
         </div>
         <%# description %>
-        <div>
+        <div class="description-and-advice">
           <p style="color:black"><%= menu_item.description %></p>
+          <br>
+          <p style="color:black"><%= menu_item.advice %></p>
         </div>
       </div>
     </div>
