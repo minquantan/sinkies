@@ -40,7 +40,7 @@ export default class extends Controller {
             </div>
             <div id = "big-name-price">
               <h3>${dishName}</h3>
-              <h3>¥${dishPrice}</h3>
+              <h3>${dishPrice}</h3>
             </div>
           </div>
           <div id = "content-holder">
