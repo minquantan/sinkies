@@ -15,7 +15,7 @@ export default class extends Controller {
     var imgs = dish.querySelectorAll('.slider img');
     console.log(imgs);
 
-    var dots = this.element.parentElement.querySelectorAll('.dot');
+    var dots = this.element.parentElement.querySelectorAll('.thumbnail-image');
     var currentImg = 0;
 
     let n = 0;
@@ -40,14 +40,14 @@ export default class extends Controller {
     function changeSlide(n) {
       for (var i = 0; i < imgs.length; i++) { // reset
         imgs[i].style.opacity = 0;
-        dots[i].className = dots[i].className.replace('active', '');
+        dots[i].className = dots[i].className.replace('big-active', '');
       }
 
       currentImg = n;
 
       imgs[currentImg].style.opacity = 1;
       // dots[currentImg].className += 'active';
-      dots[currentImg].classList.add("active");
+      dots[currentImg].classList.add("big-active");
 
 
     }

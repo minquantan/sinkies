@@ -107,6 +107,12 @@
     object-fit: cover;
     border-radius: 4px;
   }
+
+  &:hover {
+    cursor: pointer;
+    border-style: solid;
+    border-color: $navbar_accent_green;
+  }
 }
 
 #big-name-price {
