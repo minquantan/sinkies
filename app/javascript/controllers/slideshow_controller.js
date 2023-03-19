@@ -9,7 +9,7 @@ export default class extends Controller {
   }
 
 
-  changeImage() {
+  changeImage(event) {
     // var imgs = document.querySelectorAll('.slider img');
     // var dots = document.querySelectorAll('.dot');
 
@@ -49,7 +49,7 @@ export default class extends Controller {
 
 
     }
-
+    event.stopImmediatePropagation()
     console.log("changeSlide method is accessed")
 
   }

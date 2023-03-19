@@ -21,18 +21,14 @@
 
 .menu-card-description-container {
   height: 300px;
-  padding-top: 25px;
   padding-left: 25px;
   padding-right: 25px;
-  padding-bottom: 25px;
 }
 
 .menu-card-title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
   margin: 0;
 
   h3, h5 {
@@ -40,9 +36,6 @@
   }
 }
 
-.description-and-advice {
-  overflow: hidden;
-}
 
 /* ---------------------------------------------BIG MENU CARD-------------------------------------------------------- */
 #big-card-frame {

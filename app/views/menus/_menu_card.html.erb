@@ -7,7 +7,6 @@
 
   <%# Hold the pictures and the navigation dots %>
   <div data-action="scroll@window->menu-scrolling#colors" class="menu-image-container">
-
     <%# get all the pictures and stack them on each other %>
     <div class="slider">
       <%= cl_image_tag(menu_item.photos[0].key, { class: "img-1", alt: "Image 1" }) %>
@@ -31,26 +30,24 @@
       data-controller="slideshow"
       data-action="click->slideshow#changeImage"></span>
     </div>
-
   </div>
 
 
-    <%# get the details of the menu item %>
-    <div class="menu-card-description-container">
-      <%# name and price %>
-      <div class="menu-card-title-container">
-        <h3 style="font-size:24px"><%= menu_item.name %></h3>
-        <h4>¥<%=menu_item.price%></h4>
-      </div>
-      <%# description %>
-      <div class="description-and-advice">
-        <p style="color:black"><%= menu_item.description %></p>
-        <br>
-        <p style="color:black"><%= menu_item.advice %></p>
-      </div>
+  <%# get the details of the menu item %>
+  <div class="menu-card-description-container">
+    <%# name and price %>
+    <div class="menu-card-title-container">
+      <h3 style="font-size:24px"><%= menu_item.name %></h3>
+      <h4>¥<%=menu_item.price%></h4>
     </div>
-
+    <%# description %>
+    <div class="description-and-advice">
+      <p style="color:black"><%= menu_item.description %></p>
+      <p style="color:black"><%= menu_item.advice %></p>
+    </div>
   </div>
+
+</div>
 
 
 <% end %>
