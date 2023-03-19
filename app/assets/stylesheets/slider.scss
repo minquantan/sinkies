@@ -66,3 +66,12 @@
     cursor: pointer;
   }
 }
+
+// position modal
+#menu-item-modal {
+  position: fixed;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
