@@ -12,7 +12,7 @@ export default class extends Controller {
   changeImage() {
     // console.log("image was clicked");
     var dish = this.element.parentElement.parentElement.parentElement;
-    var imgs = dish.querySelectorAll('.slider img');
+    var imgs = dish.querySelectorAll('.slider-big img');
     console.log(imgs);
 
     var dots = this.element.parentElement.querySelectorAll('.thumbnail-image');

@@ -45,7 +45,7 @@ export default class extends Controller {
           </div>
           <div id = "content-holder">
             <div id="big-card-main-image">
-              <div class = "shadow slider">
+              <div class = "shadow slider-big">
                 <img src="${img1}" alt="">
                 <img src="${img2}" alt="">
                 <img src="${img3}" alt="">
