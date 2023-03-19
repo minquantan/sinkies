@@ -1,0 +1,16 @@
+<%# div for both image and details %>
+<% menu_items.each do |menu_item| %>
+
+<%# get all the pictures and stack them on each other %>
+<div class="slider">
+  <%= cl_image_tag(menu_item.photos[0].key, { class: "img-1", alt: "Image 1" }) %>
+  <%= cl_image_tag(menu_item.photos[1].key, { class: "img-2", alt: "Image 2" }) %>
+  <%= cl_image_tag(menu_item.photos[2].key, { class: "img-3", alt: "Image 3" }) %>
+  <%= cl_image_tag(menu_item.photos[3].key, { class: "img-4", alt: "Image 4" }) %>
+</div>
+
+<%# get the details of the menu item %>
+
+
+
+<% end %>
