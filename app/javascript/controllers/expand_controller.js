@@ -59,11 +59,11 @@ export default class extends Controller {
               <div>
                 <p>${dishAdvice}</p>
               </div>
-              <div id = "back-invitation">
+              <div id = "back-invitation" data-controller="expand" data-action="click->expand#closeModal">
                 <div style="margin-top:20px">
                 <p>BACK TO MENU</p>
                 </div>
-                <div id = "back-button" data-controller="expand" data-action="click->expand#closeModal">
+                <div id = "back-button">
                   <img src="https://res.cloudinary.com/minquant/image/upload/v1679308978/mascott_stretch_dyhqqi.png" alt="">
                 </div>
               </div>
@@ -76,11 +76,17 @@ export default class extends Controller {
     // insertHere.innerHTML = "<p>BACK TO MENU</p><p>BACK TO MENU</p>"
     insertHere.innerHTML = toInsert;
 
+    // activate the background div's opacity
+    document.getElementById("overlay").classList.add("active");
+
 
   }
 
   closeModal () {
     const insertHere = document.getElementById("menu-item-modal")
     insertHere.innerHTML = ''
+
+    // remove the background div's opacity
+    document.getElementById("overlay").classList.remove("active");
   }
 }
