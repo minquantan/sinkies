@@ -32,11 +32,11 @@ export default class extends Controller {
         `
         <div id = "big-card-frame">
           <div id = "heading-holder">
-            <div class = "thumbnail-holder navigation-button">
-              <div class="thumbnail-image dot active first-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="${img1}" alt=""></div>
-              <div class="thumbnail-image dot second-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="${img2}" alt=""></div>
-              <div class="thumbnail-image dot third-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="${img3}" alt=""></div>
-              <div class="thumbnail-image dot fourth-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="${img4}" alt=""></div>
+            <div class = "thumbnail-holder">
+              <div class="thumbnail-image active first-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="${img1}" alt=""></div>
+              <div class="thumbnail-image second-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="${img2}" alt=""></div>
+              <div class="thumbnail-image third-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="${img3}" alt=""></div>
+              <div class="thumbnail-image fourth-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="${img4}" alt=""></div>
             </div>
             <div id = "big-name-price">
               <h3>${dishName}</h3>
@@ -63,8 +63,8 @@ export default class extends Controller {
                 <div style="margin-top:20px">
                 <p>BACK TO MENU</p>
                 </div>
-                <div id = "back-button">
-                  <img src="https://res.cloudinary.com/minquant/image/upload/v1/development/6t77uhhs2b8pp9oy7klg5gkg5cbu" alt="">
+                <div id = "back-button" data-controller="expand" data-action="click->expand#closeModal">
+                  <img src="https://res.cloudinary.com/minquant/image/upload/v1679308978/mascott_stretch_dyhqqi.png" alt="">
                 </div>
               </div>
             </div>
@@ -77,5 +77,10 @@ export default class extends Controller {
     insertHere.innerHTML = toInsert;
 
 
+  }
+
+  closeModal () {
+    const insertHere = document.getElementById("menu-item-modal")
+    insertHere.innerHTML = ''
   }
 }

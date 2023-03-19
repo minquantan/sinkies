@@ -60,3 +60,9 @@
   border-style: solid;
   border-color: $logo-red;
 }
+
+#back-invitation {
+  &:hover {
+    cursor: pointer;
+  }
+}
