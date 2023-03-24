@@ -18,7 +18,7 @@ puts '-------------------------------------------------------------------------'
 
 gallery_image_names = [
   'Fullerton Hotel Watercolour', 'Hawker, Second Generation', 'Tools of the Hawker, Continued',
-  'Tools of the Hawker', 'Hawker,Pioneers', '"Kopitiam"', 'Handmade Ceramics', 'Peranankan Floor Tiles', 'Wallpaper'
+  'Tools of the Hawker', 'Hawker,Pioneers', 'Kopitiam', 'Handmade Ceramics', 'Peranankan Floor Tiles', 'Wallpaper'
 ]
 
 gallery_image_descriptions = [
@@ -34,7 +34,7 @@ gallery_image_descriptions = [
 ]
 
 gallery_image_names.zip(gallery_image_descriptions).each do |zip|
-  Drink.create(name: zip[0], description: zip[1])
+  GalleryImage.create(name: zip[0], description: zip[1])
   puts "the number of gallery images in your database is #{GalleryImage.count}"
 end
 
@@ -51,7 +51,7 @@ puts '-------------------------------------------------------------------------'
 puts '-------------------------------------------------------------------------'
 puts '-------------------------------------------------------------------------'
 
-gallery_urls = [
+photos = [
   'app/assets/images/seed_images/gallery/fullerton.png',
   'app/assets/images/seed_images/gallery/hawker-2.png',
   'app/assets/images/seed_images/gallery/hawker-tools-2.png',
@@ -63,14 +63,19 @@ gallery_urls = [
   'app/assets/images/seed_images/gallery/wallpaper.png'
 ]
 
-gallery_and_urls = GalleryImage.all.zip(gallery_urls)
+gallery = GalleryImage.all
+gallery_and_photos = gallery.zip(photos)
 
-gallery_and_urls.each do |zip|
-  photo = URI.open(zip[0][1])
-  zip[0].photo.attach(io: photo1, filename: "#{zip.first[0].name} 1 png", content_type: 'image/png')
-  puts ''
-  puts 'done, next.'
-  puts ''
+gallery_and_photos.each do |zip|
+  instance = zip[0]
+  photo_name = zip[0].name
+  url = URI.open(zip[1])
+
+  puts "this is the instance: #{photo_name}"
+  puts "this is the photo url: #{zip[1]}"
+  puts '------------------------------------'
+  instance.photo.attach(io: url, filename: "#{photo_name}", content_type: 'image/png')
+  puts 'attached. next.'
 end
 
 puts '-------------------------------------------------------------------------'
