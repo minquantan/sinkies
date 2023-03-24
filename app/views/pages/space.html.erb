@@ -1,5 +1,22 @@
-<% @images.each do |image| %>
-  <div>
-    <%= image_tag(image.photo) %>
+<%= render 'navbar' %>
+<div class="page-container">
+  <div class="space-intro">
+    <h1>SPACE</h1>
+    <div class="intro-content">
+      <h4>
+        Designed with the intent of “spiriting away” our guests from the
+        sprawling metropolis that is Tokyo and into our own little green
+        and sunny island, Singapore. To this end, we work with artists,
+        potters, and carpenters located in Singapore.
+      </h4>
+    </div>
   </div>
-<% end %>
+
+  <div class='gallery-items-container'>
+    <% @images.each do |image| %>
+      <div class = "gallery-image-container">
+        <%= image_tag(image.photo) %>
+      </div>
+    <% end %>
+  </div>
+</div>

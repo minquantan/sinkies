@@ -5,10 +5,7 @@ class PagesController < ApplicationController
     @images = GalleryImage.all
   end
 
-  def promotion
-    @dry_laksa = Food.find(2)
-    @laksa = Food.find(1)
-  end
+  def promotion; end
 
   def about; end
 
