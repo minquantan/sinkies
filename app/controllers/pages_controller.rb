@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   def home; end
-  def space; end
+
+  def space
+    @images = GalleryImage.all
+  end
 
   def promotion
     @dry_laksa = Food.find(2)
