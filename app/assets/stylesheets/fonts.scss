@@ -8,6 +8,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 96px;
+  text-align: center;
 }
 
 h2 {
@@ -29,4 +30,9 @@ h4 {
 
 p {
   font-size: 18;
+}
+
+.red {
+  color: $logo_red !important;
+  font-size: 100px;
 }

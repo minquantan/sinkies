@@ -11,15 +11,30 @@
   // background-size:cover;
 }
 
+.page-container {
+  width: 92%;
+  margin: auto;
+  // margin-right: 60px;
+  // margin-left: 60px;
+
+  // .page-intro {
+  //   width: 100%;
+  // }
+}
+
+
+/* ------------------------------------menu page below------------------------------------------------------- */
 .page-intro {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 200px;
-  padding-left: 60px;
-  padding-right: 60px;
+  // height: 120px;
+  // margin-top: 20px;
   align-items: center;
-  gap: 120px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: $background_green;
+  z-index: 3;
 
   h1 {
     margin: 0;
@@ -27,20 +42,47 @@
 
   h3 {
     margin: 0;
-    color: $text_red;
   }
 }
 
 .intro-content {
   display: flex;
   flex-direction: column;
-  height: 100px;
-  width: 1068px;
+  // height: 100px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 60%;
   justify-content: center;
+
 }
+
 
 .menu-categories {
   display: flex;
   flex-direction:row;
   justify-content: space-between;
+
+  h3 {
+    font-size: 28px;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $navbar_accent_green;
+      cursor: pointer;
+    }
+  }
 }
+
+.menu-items-container {
+  width: 100%;
+  // display: grid;
+  // grid-template-columns: 21% 21% 21% 21%;
+  // gap: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 65px;
+  margin-bottom: 60px;
+  scroll-margin-top: 80px;
+
+}
+
+/* ------------------------------------menu page above ------------------------------------------------------- */

@@ -1,0 +1,72 @@
+<div id = "big-card-frame">
+  <div id = "heading-holder">
+    <div class = "thumbnail-holder">
+      <div class="thumbnail-image active first-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="https://res.cloudinary.com/minquant/image/upload/v1/development/6t77uhhs2b8pp9oy7klg5gkg5cbu" alt=""></div>
+      <div class="thumbnail-image second-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="https://res.cloudinary.com/minquant/image/upload/v1/development/yk5tjw6b2siywwtosupt2rrr0sjl" alt=""></div>
+      <div class="thumbnail-image third-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="https://res.cloudinary.com/minquant/image/upload/v1/development/t8chbw04t8latx07zmncezbb04a5" alt=""></div>
+      <div class="thumbnail-image fourth-dot" data-controller="modal-slideshow" data-action="click->modal-slideshow#changeImage"><img src="https://res.cloudinary.com/minquant/image/upload/v1/development/pxqibgn84nfm02h60asofl53quo9" alt=""></div>
+    </div>
+    <div id = "big-name-price">
+      <h3>NAME</h3>
+      <h3>¥PRICE</h3>
+    </div>
+  </div>
+  <div id = "content-holder">
+    <div id="big-card-main-image">
+      <div class = "shadow slider">
+        <img src="https://res.cloudinary.com/minquant/image/upload/v1/development/6t77uhhs2b8pp9oy7klg5gkg5cbu" alt="">
+        <img src="https://res.cloudinary.com/minquant/image/upload/v1/development/yk5tjw6b2siywwtosupt2rrr0sjl" alt="">
+        <img src="https://res.cloudinary.com/minquant/image/upload/v1/development/t8chbw04t8latx07zmncezbb04a5" alt="">
+        <img src="https://res.cloudinary.com/minquant/image/upload/v1/development/pxqibgn84nfm02h60asofl53quo9" alt="">
+      </div>
+    </div>
+    <div id = "big-card-details">
+      <div>
+        <p>menu description</p>
+      </div>
+      <div>
+        <p>menu advice</p>
+      </div>
+      <div id = "back-invitation">
+        <div style="margin-top:20px">
+        <p>BACK TO MENU</p>
+        </div>
+        <div id = "back-button">
+          <img src="https://res.cloudinary.com/minquant/image/upload/v1679308978/mascott_stretch_dyhqqi.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%# small menu card just in case %>
+<%# div for both image and details %>
+  <% menu_items.each do |menu_item| %>
+
+    <div class="menu-card-container"
+    data-controller="expand"
+    data-action="click->expand#popout">
+      <%# image %>
+      <div
+      data-action="scroll@window->menu-scrolling#colors"
+      class="menu-image-container">
+        <%= cl_image_tag(menu_item.photos.first.key) %>
+      </div>
+      <%# details %>
+      <div class="menu-card-description-container">
+        <%# name and price %>
+        <div class="menu-card-title-container">
+          <h3><%= menu_item.name %></h3>
+          <h4>¥<%=menu_item.price%></h4>
+        </div>
+        <%# description %>
+        <div>
+          <p style="color:black"><%= menu_item.description %></p>
+          <br>
+          <p style="color:black"><%= menu_item.advice %></p>
+        </div>
+      </div>
+    </div>
+
+  <% end %>

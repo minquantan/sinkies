@@ -1,0 +1,59 @@
+  <%# div for enlarged menu card %>
+  <%# card frame %>
+  <div id = "big-card-frame">
+
+    <div id = "heading-holder">
+
+      <%# image selection %>
+      <div class = "thumbnail-holder">
+        <% if menu_item.photos.attached? %>
+          <% menu_item.photos.each do |photo| %>
+            <div class="thumbnail-image">
+              <%= cl_image_tag(photo.key)%>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+      <%# title & Price %>
+      <div id = "big-name-price">
+        <h3><%= menu_item.name.upcase %></h3>
+        <h3>¥<%= menu_item.price %></h3>
+      </div>
+
+    </div>
+
+    <div id = "content-holder">
+
+      <%# big image %>
+      <div id="big-card-main-image">
+        <div class = "shadow">
+          <%= cl_image_tag(menu_item.photos.first.key) %>
+        </div>
+      </div>
+
+      <div id = "big-card-details">
+        <%# description %>
+        <div>
+          <p><%= menu_item.description %></p>
+        </div>
+        <div>
+          <p><%= menu_item.advice %></p>
+        </div>
+        <%# back button %>
+        <div id = "back-invitation">
+         <div style="margin-top:20px">
+          <p>BACK TO MENU</p>
+         </div>
+          <div id = "back-button">
+            <%= image_tag 'mascott_stretch.png' %>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>

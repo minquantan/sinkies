@@ -1,0 +1,26 @@
+<%= render 'menu_card_experiment', menu_items: @main_courses %>
+
+
+
+
+<div class="slider">
+  <%= image_tag "sumatra_wallpaper.jpg", id: "img-1", alt: "Image 1" %>
+  <%= image_tag "mascott_side.png", id: "img-2", alt: "Image 2" %>
+  <%= image_tag "mascott_stretch.png", id: "img-3", alt: "Image 3" %>
+  <%= image_tag "sinkies_logo.png", id: "img-4", alt: "Image 4" %>
+</div>
+
+<div class="navigation-button">
+  <span class="dot active first-dot"
+  data-controller="slideshow"
+  data-action="click->slideshow#changeImage"></span>
+  <span class="dot second-dot"
+  data-controller="slideshow"
+  data-action="click->slideshow#changeImage"></span>
+  <span class="dot third-dot"
+  data-controller="slideshow"
+  data-action="click->slideshow#changeImage"></span>
+  <span class="dot fourth-dot"
+  data-controller="slideshow"
+  data-action="click->slideshow#changeImage"></span>
+</div>

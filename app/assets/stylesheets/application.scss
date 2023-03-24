@@ -18,8 +18,14 @@
 @import "fonts";
 @import "navbar";
 @import "pages";
+@import "cards";
+@import "slider";
 
 body {
   background-color: $background_green;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
+  // margin-left: 6%;
+  // margin-right: 6%;
+  min-height: 100vh;
 }
