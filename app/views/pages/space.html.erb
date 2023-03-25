@@ -13,23 +13,6 @@
   </div>
 
   <div id="gallery-modal">
-      <%= image_tag(@images.last.photo) %>
-
-
-    <div id="gallery-modal-details">
-      <div style="display:flex;align-items:center;justify-content:space-between">
-        <h4 style="margin:0"><%= @images.first.name %></h4>
-        <div id="back-invitation" class="quit-modal">
-          <div>
-            <p style="margin-top:8px;margin-bottom:0px;font-size:14px">BACK</p>
-          </div>
-          <div id="back-button" style="width:30px;display:flex;align-items:center">
-            <img src="https://res.cloudinary.com/minquant/image/upload/v1679308978/mascott_stretch_dyhqqi.png" alt="">
-          </div>
-        </div>
-      </div>
-      <p><%= @images.first.description %></p>
-    </div>
   </div>
 
   <div class='gallery-items-container'>
