@@ -1,5 +1,6 @@
 <%= render 'navbar' %>
-<div class="page-container">
+<div class="page-container"
+data-controller="gallery">
   <div class="space-intro">
     <h1>SPACE</h1>
     <div class="intro-content">
@@ -14,7 +15,7 @@
 
   <div class='gallery-items-container'>
     <% @images.each do |image| %>
-      <div class = "gallery-image-container">
+      <div class = "gallery-image-container" data-action="click->gallery#popout">
         <%= image_tag(image.photo) %>
       </div>
     <% end %>
