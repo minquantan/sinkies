@@ -107,6 +107,8 @@
 
 }
 
+/* ------------------------------------Gallery page below ------------------------------------------------------- */
+
 .gallery-items-container {
   width: 100%;
   display: flex;
@@ -138,4 +140,37 @@
   opacity: 0;
 }
 
-/* ------------------------------------menu page above ------------------------------------------------------- */
+#gallery-modal {
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  padding: 20px;
+}
+
+#gallery-modal {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  // position: relative;
+
+  img {
+    max-height: 75vh;
+    max-width: 75vw;
+  }
+}
+
+.quit-modal {
+  // position: absolute;
+  // top: 10px;
+  // right: 10px;
+}
+
+#gallery-modal-details {
+  // max-width: 80%;
+  margin-left: 0;
+  margin-right: 0;
+}

@@ -13,6 +13,21 @@
   </div>
 
   <div id="gallery-modal">
+    <%= image_tag(@images.last.photo) %>
+
+    <div id="back-invitation" class="quit-modal">
+      <div style="margin-top:20px">
+        <p>BACK TO GALLERY</p>
+      </div>
+      <div id = "back-button">
+        <img src="https://res.cloudinary.com/minquant/image/upload/v1679308978/mascott_stretch_dyhqqi.png" alt="">
+      </div>
+    </div>
+
+    <div id="gallery-modal-details">
+      <h4><%= @images.first.name %></h4>
+      <p><%= @images.first.description %></p>
+    </div>
   </div>
 
   <div class='gallery-items-container'>
@@ -28,5 +43,5 @@
   </div>
 </div>
 
-<div id = "overlay">
+<div id="overlay" class="active">
 </div>
