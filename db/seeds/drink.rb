@@ -1,3 +1,5 @@
+require 'open-uri'
+
 # seed details for drinks
 # t.string "menu_category"
 # t.string "name"
@@ -17,7 +19,7 @@ puts '-------------------------------------------------------------------------'
 puts '-------------------------------------------------------------------------'
 
 drink_names = [
-  'Teh', 'Teh-C', 'Teh-O', 'Teh Halia', 'Kopi', 'Kopi-C', 'Kopi-O', 'Kopi "Sinkies Split"',
+  'Teh', 'Teh-C', 'Teh-O', 'Teh Halia', 'Kopi', 'Kopi-C', 'Kopi-O', 'Sinkies Split',
   'Lime Juice', 'Milo', 'Coca Cola', 'Tiger Beer'
 ]
 
@@ -33,8 +35,8 @@ drink_descriptions = [
   'Fresh-brewed Singapore roasted coffee with condensed milk. Aromatic and balanced.',
   'Fresh-brewed Singapore roasted coffee with evaporated milk. Creamy with a chocolately flavour.',
   'Fresh-brewed Singapore roasted coffee. Robust with an addictively sharp, bitter edge.',
-  'Fresh-brewed Singapore roasted coffee served with both condensed and evaporated milk.
-  The best of both worlds; aromatic, slightly sweet and some creaminess.',
+  'The best of both worlds. Your choice of either fresh-brewed coffee or tea to be served with both condensed and evaporated milk.
+  Guaranteed aromatic, slightly sweet and with some creaminess.',
   "Using freshly squeezed limes, this is Singapore's ultimate thrist quencher.",
   'A chocolately milk-based drink',
   "Warren's  favourite beverage. The nectar of the gods.",
