@@ -15,21 +15,33 @@ export default class extends Controller {
 
     const modal = document.getElementById("gallery-modal");
     modal.innerHTML = `
-      <img src="${image}">
+      <div id="gallery-modal-image">
+        <img src="${image}">
+      </div>
       <div id="gallery-modal-details">
-        <div style="display:flex;align-items:center;justify-content:space-between">
-          <h4 style="margin:0">${name}</h4>
-          <div id="back-invitation" class="quit-modal">
+        <div style="display:flex;align-items:center;justify-content:space-between;height:30px;margin-top:9px; margin-bottom:8px">
+          <h4 style="margin-top:9px; margin-bottom:0px">${name}</h4>
+          <div id="back-invitation" class="quit-modal" data-controller="gallery" data-action="click->gallery#closeModal">
             <div>
-              <p style="margin-top:8px;margin-bottom:0px;font-size:14px">BACK</p>
+              <p style="margin-top:10px;margin-bottom:0px;font-size:14px">BACK</p>
             </div>
             <div id="back-button" style="width:30px;display:flex;align-items:center">
               <img src="https://res.cloudinary.com/minquant/image/upload/v1679308978/mascott_stretch_dyhqqi.png" alt="">
             </div>
           </div>
         </div>
-        <p>${description}</p>
+        <p style="margin-top:0px;margin-bottom:20px">${description}</p>
       </div>
     `
+     // add the background div's opacity
+     document.getElementById("overlay").classList.add("active");
+  }
+
+  closeModal () {
+    const insertHere = document.getElementById("gallery-modal")
+    insertHere.innerHTML = ''
+
+    // remove the background div's opacity
+    document.getElementById("overlay").classList.remove("active");
   }
 }

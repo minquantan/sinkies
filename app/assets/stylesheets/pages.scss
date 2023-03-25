@@ -147,7 +147,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
-  padding: 20px;
+  // padding: 20px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -159,9 +159,24 @@
   }
 }
 
+#gallery-modal-image {
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-left:20px;
+  display: flex;
+  align-items: center;
+
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
 
 #gallery-modal-details {
   // max-width: 80%;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-left: 0;
   margin-right: 0;
 }
