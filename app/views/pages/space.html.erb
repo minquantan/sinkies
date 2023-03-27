@@ -1,0 +1,33 @@
+<%= render 'navbar' %>
+<div class="page-container">
+  <div class="space-intro">
+    <h1>SPACE</h1>
+    <div class="intro-content">
+      <h4>
+        Designed with the intent of “spiriting away” our guests from the
+        sprawling metropolis that is Tokyo and into our own little green
+        and sunny island, Singapore. To this end, we work with artists,
+        potters, and carpenters located in Singapore.
+      </h4>
+    </div>
+  </div>
+
+<div id="gallery-modal">
+</div>
+
+  <div class='gallery-items-container'>
+    <% @images.each do |image| %>
+      <div class="gallery-image-container" data-controller="gallery" data-action="click->gallery#popout">
+        <div class="gallery-details">
+          <p class="gallery-name"><%= image.name %></p>
+          <p class="gallery-description"><%= image.description %></p>
+        </div>
+        <%= image_tag(image.photo) %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<div id="overlay">
+</div>

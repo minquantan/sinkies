@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
   def home; end
-  def space; end
 
-  def promotion
-    @dry_laksa = Food.find(2)
-    @laksa = Food.find(1)
+  def space
+    @images = GalleryImage.all
   end
+
+  def promotion; end
 
   def about; end
 

@@ -24,7 +24,7 @@
 
 
 /* ------------------------------------menu page below------------------------------------------------------- */
-.page-intro {
+.menu-intro {
   display: flex;
   flex-direction: row;
   // height: 120px;
@@ -35,6 +35,28 @@
   top: 0;
   background-color: $background_green;
   z-index: 3;
+
+  h1 {
+    margin: 0;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.space-intro {
+  display: flex;
+  flex-direction: row;
+  // height: 120px;
+  // margin-top: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  position: sticky;
+  top: 0;
+  background-color: $background_green;
+  z-index: 3;
+
 
   h1 {
     margin: 0;
@@ -85,4 +107,76 @@
 
 }
 
-/* ------------------------------------menu page above ------------------------------------------------------- */
+/* ------------------------------------Gallery page below ------------------------------------------------------- */
+
+.gallery-items-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  margin-bottom: 60px;
+  scroll-margin-top: 80px;
+}
+
+.gallery-image-container {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 432px;
+  height: 480px;
+  cursor: pointer;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.gallery-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+#gallery-modal {
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  // padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  img {
+    max-height: 75vh;
+    max-width: 75vw;
+  }
+}
+
+#gallery-modal-image {
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-left:20px;
+  display: flex;
+  align-items: center;
+
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+#gallery-modal-details {
+  // max-width: 80%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
