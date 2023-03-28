@@ -1,3 +1,5 @@
+require 'open-uri'
+
 # seed details for foods
 # t.string "menu_category"
 # t.string "name"

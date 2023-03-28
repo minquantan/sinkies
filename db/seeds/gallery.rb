@@ -3,7 +3,6 @@
 # t.text "description"
 require 'open-uri'
 
-
 puts '-------------------------------------------------------------------------'
 puts '-------------------------------------------------------------------------'
 puts '-------------------------------------------------------------------------'
@@ -18,7 +17,7 @@ puts '-------------------------------------------------------------------------'
 
 gallery_image_names = [
   'Fullerton Hotel Watercolour', 'Hawker, Second Generation', 'Tools of the Hawker, Continued',
-  'Tools of the Hawker', 'Hawker,Pioneers', 'Kopitiam', 'Handmade Ceramics', 'Peranankan Floor Tiles', 'Wallpaper'
+  'Tools of the Hawker', 'Hawker, Pioneers', 'Kopitiam', 'Handmade Ceramics', 'Peranankan Floor Tiles', 'Wallpaper'
 ]
 
 gallery_image_descriptions = [
@@ -30,7 +29,7 @@ gallery_image_descriptions = [
   '"Kopitiam" is the local name for "Coffee House".',
   'Gorgeous works by Mudrock Ceramics, the provider of Sinkies plateware.',
   'Colourful, patterned tiles were highly popular in the past.',
-  %Q(Tropical wallpaper calling back to Singapore's history as a heavily forested island),
+  "Tropical wallpaper calling back to Singapore's history as a heavily forested island"
 ]
 
 gallery_image_names.zip(gallery_image_descriptions).each do |zip|
@@ -74,7 +73,7 @@ gallery_and_photos.each do |zip|
   puts "this is the instance: #{photo_name}"
   puts "this is the photo url: #{zip[1]}"
   puts '------------------------------------'
-  instance.photo.attach(io: url, filename: "#{photo_name}", content_type: 'image/png')
+  instance.photo.attach(io: url, filename: photo_name.to_s, content_type: 'image/png')
   puts 'attached. next.'
 end
 

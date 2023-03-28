@@ -45,27 +45,6 @@
   }
 }
 
-.space-intro {
-  display: flex;
-  flex-direction: row;
-  // height: 120px;
-  // margin-top: 20px;
-  align-items: center;
-  justify-content: space-evenly;
-  position: sticky;
-  top: 0;
-  background-color: $background_green;
-  z-index: 3;
-
-
-  h1 {
-    margin: 0;
-  }
-
-  h3 {
-    margin: 0;
-  }
-}
 
 .intro-content {
   display: flex;
@@ -85,6 +64,7 @@
   justify-content: space-between;
 
   h3 {
+    font-family: 'Strait', sans-serif;
     font-size: 28px;
     &:hover {
       text-decoration: underline;
@@ -108,6 +88,22 @@
 }
 
 /* ------------------------------------Gallery page below ------------------------------------------------------- */
+.space-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: $background_green;
+
+  h1 {
+    margin: 0;
+  }
+
+  h3 {
+    margin: 0;
+    font-weight: 400;
+  }
+}
 
 .gallery-items-container {
   width: 100%;
@@ -119,7 +115,14 @@
   scroll-margin-top: 80px;
 }
 
+#space-intro {
+  font-family:'Sulphur Point', sans-serif;
+  line-height:22px;
+  font-size:20px;
+}
+
 .gallery-image-container {
+  margin-top: 14px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   width: 432px;
   height: 480px;
@@ -179,4 +182,55 @@
   padding-left: 20px;
   margin-left: 0;
   margin-right: 0;
+}
+
+/* ------------------------------------About page below ------------------------------------------------------- */
+#about-title {
+  text-align: start;
+  margin-left: 108px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Strait', sans-serif;
+}
+
+.content-image-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: auto;
+}
+
+.about-content {
+  width: 40%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-family: 'Strait', sans-serif;
+  }
+
+  p {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.about-image {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  width: 40%;
+  // height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  img {
+    border-radius: 8px;
+    // height: 100%;
+    width: 100%;
+    // object-fit: cover;
+  }
 }
