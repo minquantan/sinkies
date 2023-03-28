@@ -17,7 +17,7 @@ puts '-------------------------------------------------------------------------'
 
 gallery_image_names = [
   'Fullerton Hotel Watercolour', 'Hawker, Second Generation', 'Tools of the Hawker, Continued',
-  'Tools of the Hawker', 'Hawker,Pioneers', 'Kopitiam', 'Handmade Ceramics', 'Peranankan Floor Tiles', 'Wallpaper'
+  'Tools of the Hawker', 'Hawker, Pioneers', 'Kopitiam', 'Handmade Ceramics', 'Peranankan Floor Tiles', 'Wallpaper'
 ]
 
 gallery_image_descriptions = [
