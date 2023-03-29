@@ -1,28 +1,47 @@
 <%= render 'navbar' %>
 
-<%= render 'menu_card_experiment', menu_items: @main_courses %>
+<div class="page-container">
+
+  <h1 class="page-header" style="margin-bottom:30px">Contact</h1>
+  <div class="split-box">
+
+    <%# content %>
+    <div>
+
+      <%# hours %>
+      <div>
+        <h3>Hours</h3>
+        <div class="split-box">
+          <p>Monday - Friday</p>
+          <p>0900 - 2045</p>
+        </div>
+        <div class="split-box">
+          <p>Saturday - Sunday</p>
+          <p>0900 - 2100</p>
+        </div>
+      </div>
+
+      <%# contact %>
+      <div>
+        <h3>Reach Us Here</h3>
+        <div class="split-box">
+          <p>Telephone</p>
+          <p>0065 9351 8644</p>
+        </div>
+        <div class="split-box">
+          <p>Email</p>
+          <p>sinkies_rule_the_world@sinkies.com</p>
+        </div>
+      </div>
 
 
+    </div>
 
+    <%# image %>
+    <div id="interactive-map">
+      <%= image_tag('i_am_sinkie.png') %>
+    </div>
 
-<div class="slider">
-  <%= image_tag "sumatra_wallpaper.jpg", id: "img-1", alt: "Image 1" %>
-  <%= image_tag "mascott_side.png", id: "img-2", alt: "Image 2" %>
-  <%= image_tag "mascott_stretch.png", id: "img-3", alt: "Image 3" %>
-  <%= image_tag "sinkies_logo.png", id: "img-4", alt: "Image 4" %>
-</div>
+  </div>
 
-<div class="navigation-button">
-  <span class="dot active first-dot"
-  data-controller="slideshow"
-  data-action="click->slideshow#changeImage"></span>
-  <span class="dot second-dot"
-  data-controller="slideshow"
-  data-action="click->slideshow#changeImage"></span>
-  <span class="dot third-dot"
-  data-controller="slideshow"
-  data-action="click->slideshow#changeImage"></span>
-  <span class="dot fourth-dot"
-  data-controller="slideshow"
-  data-action="click->slideshow#changeImage"></span>
 </div>
