@@ -23,15 +23,14 @@ export default class extends Controller {
       });
 
       // The marker, positioned at Uluru
-      const marker = new AdvancedMarkerView({
-        map: map,
+      new google.maps.Marker({
         position: position,
+        map,
         title: "Uluru",
       });
+
     }
 
     initMap();
   }
-
-
 }
