@@ -128,15 +128,17 @@
 .gallery-image-container {
   margin-top: 14px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  width: 400px;
-  height: 420px;
+  width: 450px;
+  height: 480px;
   cursor: pointer;
   position: relative;
+  border-radius: 2px;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 2px;
   }
 }
 
@@ -233,9 +235,7 @@
 
   img {
     border-radius: 8px;
-    // height: 100%;
     width: 100%;
-    // object-fit: cover;
   }
 }
 
