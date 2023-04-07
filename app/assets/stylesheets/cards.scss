@@ -163,3 +163,50 @@
     object-fit: cover;
   }
 }
+
+/* ---------------------------------------------PROMOTION CARD-------------------------------------------------------- */
+.promotion-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.promotion-card-image {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+}
+
+.promotion-card-details {
+  width: 400px;
+  height: 200px;
+  background-color: white;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  ul {
+    font-size: 12px;
+    font-family: 'Sulphur Point', sans-serif;
+    color: $header_red;
+    list-style-position: outside;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+#promo-title {
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+  margin-top: 4%;
+}
+
+.promo-description {
+  padding-left: 8%;
+  padding-right: 8%;
+}
