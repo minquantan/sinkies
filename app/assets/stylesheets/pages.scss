@@ -22,6 +22,10 @@
   // }
 }
 
+.page-header {
+  margin: 0;
+}
+
 
 /* ------------------------------------menu page below------------------------------------------------------- */
 .menu-intro {
@@ -109,7 +113,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   row-gap: 20px;
   margin-bottom: 60px;
   scroll-margin-top: 80px;
@@ -124,15 +128,17 @@
 .gallery-image-container {
   margin-top: 14px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  width: 432px;
+  width: 450px;
   height: 480px;
   cursor: pointer;
   position: relative;
+  border-radius: 2px;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 2px;
   }
 }
 
@@ -229,8 +235,49 @@
 
   img {
     border-radius: 8px;
-    // height: 100%;
     width: 100%;
-    // object-fit: cover;
   }
+}
+
+/* ------------------------------------Contact page below ------------------------------------------------------- */
+.split-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+
+  p {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+#map-holder {
+  height: 420px;
+  width: 40%;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+  }
+}
+
+/* ------------------------------------Promotion page below ------------------------------------------------------- */
+.promo-holder {
+  display:flex;
+  width:100%;
+  justify-content: space-evenly;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
