@@ -24,22 +24,21 @@ drink_names = [
 ]
 
 drink_prices = [
-  300, 300, 300, 320, 300, 300, 300, 300, 350, 350, 300, 350
+  300, 300, 300, 350, 350, 350, 350, 350, 400, 400, 300, 400
 ]
 
 drink_descriptions = [
   'Fresh-brewed ceylon tea with condensed milk. Fragrant and gently sweet',
   'Fresh-brewed ceylon tea with evaporated milk. A creamier, richer blend ',
   'Fresh-brewed ceylon tea. Sugared. Fullbodied with an elegant bitterness.',
-  'Fresh-brewed ceylon tea enhanced with ginger; highly energising and refreshing.',
+  'Fresh-brewed ceylon tea with ginger; energising and refreshing.',
   'Fresh-brewed Singapore roasted coffee with condensed milk. Aromatic and balanced.',
   'Fresh-brewed Singapore roasted coffee with evaporated milk. Creamy with a chocolately flavour.',
   'Fresh-brewed Singapore roasted coffee. Robust with an addictively sharp, bitter edge.',
-  'The best of both worlds. Your choice of either fresh-brewed coffee or tea to be served with both condensed and evaporated milk.
-  Guaranteed aromatic, slightly sweet and with some creaminess.',
-  "Using freshly squeezed limes, this is Singapore's ultimate thrist quencher.",
-  'A chocolately milk-based drink',
-  "Warren's  favourite beverage. The nectar of the gods.",
+  'Your choice of either fresh-brewed coffee or tea blended with both condensed and evaporated milk.',
+  "Singapore's ultimate thrist quencher. A refreshingly tart, sunny, and tropical drink. Highly recommended with spiced foods.",
+  'A malted chocolate drink that all Singaporeans grow up on',
+  'Original Taste Coca Cola, served in an old-school tumbler glass',
   'World Acclaimed lager. Fresh and crisp with good carbonation. Highly recommended with spiced foods.'
 ]
 

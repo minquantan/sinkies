@@ -14,6 +14,9 @@ puts '--------------------------------------------------------------------------
 #     t.integer "food_id"
 #     t.integer "drink_id"
 
+# Tour of Singapore -> otah/curry puff, Nasi Lemak/Laksa, Agar, Lime Juice/beer
+
+
 set_meal_names = [
   'My Meal',
   'Grand Tour',

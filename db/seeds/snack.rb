@@ -8,24 +8,23 @@ puts '--------------------------------------------------------------------------
 puts '------------------------------------------------------------------------------------------------'
 
 snack_names = [
-  'Strips', 'Sotong Balls', 'Otah', 'Curry Puff'
+  'Strips', 'Roti Prata', 'Otah', 'Curry Puff'
 ]
 
 snack_prices = [
-  500, 400, 400, 540
+  550, 400, 550, 400
 ]
 
 snack_descriptions = [
-  'Deep-fried, 24-hour spice marinated chicken tenders. Highly addictive.',
-  'Cuttlefish paste shaped into spheres and lightly fried. Imported from Singapore.',
-  'Ground fish wrapped in banana leaf and grilled. Savoury and aromatic. Provided
-  in collaboration with the famous Singaporean brand, "Lee & Wee Brothers".',
-  'Savoury chunks of curried potato and chicken encased in pastry. The perfect afternoon tea item.'
+  'Deep-fried, 24-hour spice home-marinated chicken tenders. Highly addictive.',
+  'Crisp and flaky flatbread paired with light and tangy curry gravy.',
+  'Minced fish and spices wrapped in banana leaf and grilled. Savoury and aromatic.',
+  'Curried potato and chicken encased in pastry and fried. The perfect afternoon snack.'
 ]
 
 snack_advices = [
   'Served in threes.',
-  'Served in plates of 5.',
+  'Served per piece',
   'Served in pairs. **Please note that small bones may be present',
   'Served in pairs with one Chinese style and one Malay style. Single and odd-number orders possible.'
 ]
