@@ -15,36 +15,42 @@ puts '-------------------------------------------------------------------------'
 puts '-------------------------------------------------------------------------'
 
 main_course_names = [
-  'Laksa', 'Laksa Dry', 'Mee Soto', 'Nasi Lemak', 'Kaya Toast', 'S4'
+  'Laksa', 'Laksa with Oyster', 'Laksa Dry', 'Mee Soto', 'Nasi Lemak', 'Kaya Toast', 'S4'
 ]
 
 main_course_prices = [
-  1200, 1200, 1200, 1600, 800, 2000
+  1700, 2000, 1700, 1700, 1700, 800, 2400
 ]
 
 main_course_descriptions = [
-  'Iconic and much-loved in Singapore. Savoury, spicy seafood broth balanced with coconut cream.
-  Served with rice vermicelli, yellow noodles, and assorted toppings.',
+  'A Singaporean classic and Sinkies signature. Savoury, spiced seafood broth balanced with coconut cream.
+  Served with your choice of noodles and assorted toppings.',
+  'Our signature Laksa made even better by sweet, plump, Hiroshima Oysters.
+  Served with your choice of noodles and assorted toppings.',
   'Our signature Laksa noodles tossed in the pan and served dry. A more direct and intense experience
   than the original.',
-  'A popular Malay soul food. Yellow noodles in a comforting, mildly-spiced chicken broth. Served
+  'A popular Malay dish of noodles and mildly-spiced chicken broth. Served
   with shredded chicken and assorted toppings.',
-  'Fragrant coconut rice, fried chicken, and assorted toppings. The chicken is marinated for 24 hours
-  in a spice blend of over 10 different varieties.',
-  'Singapore’s national all-day breakfast. Toast spread with coconut jam accompanied with
-  two soft-boiled eggs.',
+  'Fragrant coconut rice, fried chicken, and assorted toppings. Our chicken is marinated for at least
+  24 hours in a blend of over 10 different spices.',
+  'Singapore’s iconic national all-day breakfast. Toast spread with coconut jam and served
+  with soft-boiled eggs. Dip your toast in the eggs for an addictive sweet-and-salty flavour',
   'Sinkies Specialty Seafood Stew. Salmon, prawns and scallops cooked with Southeast Asian aromatics
   and tomato.'
 ]
 
 main_course_advices = [
-  'Regular and extra spicy versions available.',
-  'Regular and extra spicy versions available.',
-  '',
+  "Choice of noodles: Yellow Noodle, Rice Vermicelli, Flat Rice Noodle, Mixed
+  \nRegular and extra spicy versions available.",
+  "Choice of noodles: Yellow Noodle, Rice Vermicelli, Flat Rice Noodle, Mixed
+  \nRegular and extra spicy versions available.",
+  "Choice of noodles: Yellow Noodle, Rice Vermicelli, Flat Rice Noodle, Mixed
+  \nRegular and extra spicy versions available.",
+  'Choice of noodles: Yellow Noodle, Rice Vermicelli, Flat Rice Noodle, Mixed',
   'Choice available between chicken breast and legs, while stocks last.',
   "Coconut jam flavours available: Pandan, Gula Melaka, Coffee, and Tea. Selection of up to 2 flavours.
-  \nHalf-portions available at ¥400.",
-  'Served with your choice of either rice or buttered toast.'
+  \nHalf-portions available at ¥500.",
+  'Served with your choice of either coconut rice or buttered toast.'
 ]
 
 main_course_names.zip(main_course_prices, main_course_descriptions, main_course_advices).each do |zip|
@@ -73,6 +79,12 @@ main_course_photos = [
     'app/assets/images/seed_images/food/main_course/laksa-2.png',
     'app/assets/images/seed_images/food/main_course/laksa-3.png',
     'app/assets/images/seed_images/food/main_course/laksa-4.png'
+  ],
+  [
+    'app/assets/images/seed_images/food/main_course/laksa-3.png',
+    'app/assets/images/seed_images/food/main_course/laksa-4.png',
+    'app/assets/images/seed_images/food/main_course/laksa-1.png',
+    'app/assets/images/seed_images/food/main_course/laksa-2.png'
   ],
   [
     'app/assets/images/seed_images/food/main_course/laksa-dry-1.png',

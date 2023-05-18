@@ -12,21 +12,21 @@ dessert_names = [
 ]
 
 dessert_prices = [
-  400, 600, 400, 500
+  400, 700, 400, 700
 ]
 
 dessert_descriptions = [
   'Two layered agar jelly flavoured with tropical palm sugar, pandan leaves, and coconut',
   '60% pure mango. A classic Cantonese dessert that is very popular in Singapore',
-  'Moist butter cake infused with lemon juice. Served warm',
-  'A thick ice-cream slice sandwiched between rainbow bread, just like how the uncles serve it down at Orchard Road.'
+  'Moist butter cake infused with lemon. Served warm',
+  'A thick ice-cream slice sandwiched between rainbow bread, just like how the old-timers serve it at Orchard Road.'
 ]
 
 dessert_advices = [
   'Three pieces per serving.',
-  'Evaporated milk available on the side upon request.',
   '',
-  'Flavours available: Durian, Teh, Kopi, Coconut, Mangosteen'
+  '',
+  'Flavours available: Durian, Lychee, Mango, Chocolate'
 ]
 
 dessert_names.zip(dessert_prices, dessert_descriptions, dessert_advices).each do |zip|
