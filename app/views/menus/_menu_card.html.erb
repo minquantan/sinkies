@@ -1,12 +1,12 @@
 <%# div for both image and details %>
 <% menu_items.each do |menu_item| %>
 
-<div class="menu-card-container"
+<div class="menu-card"
   data-controller="expand"
   data-action="click->expand#expandModal">
 
   <%# Hold the pictures and the navigation dots %>
-  <div data-action="scroll@window->menu-scrolling#colors" class="menu-image-container">
+  <div data-action="scroll@window->menu-scrolling#colors" class="menu-image">
     <%# get all the pictures and stack them on each other %>
     <div class="slider">
       <%= cl_image_tag(menu_item.photos[0].key, { class: "img-1", alt: "Image 1" }) %>
@@ -34,9 +34,9 @@
 
 
   <%# get the details of the menu item %>
-  <div class="menu-card-description-container">
+  <div class="menu-card-description">
     <%# name and price %>
-    <div class="menu-card-title-container">
+    <div class="menu-card-title">
       <h3 style="font-size:24px"><%= menu_item.name %></h3>
       <h4>¥<%=menu_item.price%></h4>
     </div>

@@ -1,7 +1,7 @@
 @import "colors";
 
-/* -------------------------------------------SMALL MENU CARDS------------------------------------------------------- */
-.menu-card-container {
+/* -------------------------------------------MENU CARD------------------------------------------------------- */
+.menu-card {
   display: flex;
   flex-direction: column;
   height: 600px;
@@ -14,18 +14,18 @@
   }
 }
 
-.menu-image-container {
+.menu-image {
   width: 100%;
   height: 300px;
 }
 
-.menu-card-description-container {
+.menu-card-description {
   height: 300px;
   padding-left: 25px;
   padding-right: 25px;
 }
 
-.menu-card-title-container {
+.menu-card-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
