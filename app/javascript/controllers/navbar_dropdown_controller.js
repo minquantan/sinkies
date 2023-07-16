@@ -19,7 +19,17 @@ export default class extends Controller {
 
   greet() {
     console.log("greet me fool");
+    console.log(this.element);
     let dropdown = document.querySelector(".dropdown-menu");
     dropdown.classList.toggle("open");
+    console.log(dropdown);
+    let toggleBtn = document.querySelector(".toggle-btn i")
+
+    if (dropdown.classList.contains("open")) {
+      toggleBtn.classList = "fa-solid fa-xmark";
+    } else {
+      toggleBtn.classList = "fa-solid fa-bars";
+    }
+
   }
 }
