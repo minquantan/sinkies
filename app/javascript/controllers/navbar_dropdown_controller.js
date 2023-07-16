@@ -14,10 +14,12 @@ export default class extends Controller {
 
   connect() {
     // this.outputTarget.textContent = 'Hello, Stimulus!'
-    console.log("work you retarded git")
+    console.log("navbar dropdown ready")
   }
 
   greet() {
-    console.log("greet me fool")
+    console.log("greet me fool");
+    let dropdown = document.querySelector(".dropdown-menu");
+    dropdown.classList.toggle("open");
   }
 }
