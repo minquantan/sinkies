@@ -30,6 +30,5 @@ export default class extends Controller {
     } else {
       toggleBtn.classList = "fa-solid fa-bars";
     }
-
   }
 }
