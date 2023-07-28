@@ -118,6 +118,12 @@
   }
 }
 
+.fa-solid {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .open {
   height: 300px;
 }
