@@ -1,6 +1,7 @@
 
 <%# navbar %>
-<div class="navbar navbar-home-background-color">
+<div class="navbar navbar-home-background-color"
+data-controller="navbar-dropdown">
 
   <%# image %>
   <div class="navbar-logo">
@@ -10,19 +11,36 @@
   </div>
 
   <%# navigation links %>
-  <div class="navlink-container">
-    <%= link_to "MENU", menu_path, class: "navlink" %>
-    <%= link_to "SPACE", space_path, class: "navlink" %>
-    <%= link_to "PROMOTION", promotion_path, class: "navlink" %>
-    <%= link_to "ABOUT", about_path, class: "navlink" %>
-    <%= link_to "CONTACT", contact_path, class: "navlink" %>
-    <%= link_to "RESERVATIONS", reservations_path, id: "navlink-reservations" %>
-  </div>
+  <%# <div class="navlink-container"> %>
+  <ul class="navbar-list">
+    <li><%= link_to "MENU", menu_path, class: "navlink" %></li>
+    <li><%= link_to "SPACE", space_path, class: "navlink" %></li>
+    <li><%= link_to "PROMOTION", promotion_path, class: "navlink" %></li>
+    <li><%= link_to "ABOUT", about_path, class: "navlink" %></li>
+    <li><%= link_to "CONTACT", contact_path, class: "navlink" %></li>
+    <li><%= link_to "RESERVATIONS", reservations_path, id: "navlink-reservations" %></li>
+  </ul>
+  <%# </div> %>
 
   <%# language toggle %>
   <div class="language-toggle">
     <p>日本語 </p>
     <i class="fa-solid fa-caret-down inverted-triangle"></i>
+  </div>
+
+  <div class="toggle-btn"
+  data-action="click->navbar-dropdown#greet">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <div class="dropdown-menu">
+    <li><%= link_to "MENU", menu_path, class: "navlink" %></li>
+    <li><%= link_to "SPACE", space_path, class: "navlink" %></li>
+    <li><%= link_to "PROMOTION", promotion_path, class: "navlink" %></li>
+    <li><%= link_to "ABOUT", about_path, class: "navlink" %></li>
+    <li><%= link_to "CONTACT", contact_path, class: "navlink" %></li>
+    <li><%= link_to "RESERVATIONS", reservations_path, class: "navlink" %></li>
+    <li class="navlink">日本語</li>
   </div>
 
 </div>
