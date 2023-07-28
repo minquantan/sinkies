@@ -70,13 +70,19 @@
 
 .menu-items-container {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 65px;
   margin-bottom: 60px;
   scroll-margin-top: 80px;
-
 }
+
+@media (max-width: 900px) {
+  .menu-navbar {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 
 /* ------------------------------------Gallery page below ------------------------------------------------------- */
 .space-intro {

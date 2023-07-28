@@ -11,23 +11,24 @@ export default class extends Controller {
 
     // get the element that was clicked
     const clickedCategory = this.element.className
+    console.log(clickedCategory)
 
     // pair the element that was clicked to it's destination
     let clickDestination = '';
     switch (clickedCategory) {
-      case 'link-to-mains':
+      case 'link-to-mains grid-item':
         clickDestination = 'gate-to-mains';
         break;
-      case 'link-to-snacks':
+      case 'link-to-snacks grid-item':
         clickDestination = 'gate-to-snacks';
         break;
-      case 'link-to-desserts':
+      case 'link-to-desserts grid-item':
         clickDestination = 'gate-to-desserts';
         break;
-      case 'link-to-sets':
+      case 'link-to-sets grid-item':
         clickDestination = 'gate-to-sets';
         break;
-      case 'link-to-drinks':
+      case 'link-to-drinks grid-item':
         clickDestination = 'gate-to-drinks';
         break;
 

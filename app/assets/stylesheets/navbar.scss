@@ -160,15 +160,43 @@
   // flex-direction: row;
   // align-items: center;
   // justify-content: center;
-  // position: sticky;
-  // top: 0;
-  // background-color: $background_green;
-  // z-index: 3;
+  background-color: $background_green;
+  box-sizing: border-box;
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
   h3 {
-    margin: 0;
+    margin: 0 auto;
+  }
+}
+
+
+.grid-item {
+  align-items: center;
+  text-align: center;
+  font-size: 28px;
+}
+
+
+
+.menu-navbar h3 {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-navbar {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+  }
+
+  .grid-item {
+    font-size: 22px;
   }
 }
