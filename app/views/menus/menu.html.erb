@@ -11,44 +11,7 @@
   <div class='menu-intro'>
 
     <%# Menu categories and navigation %>
-    <div class='intro-content'>
-
-
-      <div id='categories' class='menu-categories'
-        data-action="scroll@window->category-highlight#colors">
-        <h3
-          id='cat-main' style="font-size:28px" class="link-to-mains"
-          data-controller="go"
-          data-action="scroll@window->category-highlight#colors click->go#goToSection">
-          MAIN COURSE
-        </h3>
-        <h3
-          id='cat-snack' class="link-to-snacks" style="font-size:28px"
-          data-controller="go"
-          data-action="scroll@window->category-highlight#colors click->go#goToSection">
-          SNACKS
-        </h3>
-        <h3
-          id='cat-dessert' class="link-to-desserts" style="font-size:28px"
-          data-controller="go"
-          data-action="scroll@window->category-highlight#colors click->go#goToSection">
-          DESSERTS
-        </h3>
-        <h3
-          id='cat-set' class="link-to-sets" style="font-size:28px"
-          data-controller="go"
-          data-action="scroll@window->category-highlight#colors click->go#goToSection">
-          SET MEALS
-        </h3>
-        <h3
-          id='cat-drink' class="link-to-drinks" style="font-size:28px"
-          data-controller="go"
-          data-action="scroll@window->category-highlight#colors click->go#goToSection">
-          DRINKS
-        </h3>
-      </div>
-
-    </div>
+    <%= render 'menu_page_navigation' %>
 
   </div>
 
