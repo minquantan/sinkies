@@ -75,6 +75,14 @@
   gap: 65px;
   margin-bottom: 60px;
   scroll-margin-top: 80px;
+  align-items: center;
+  justify-items: center;
+}
+
+@media (max-width: 1200px) {
+  .menu-items-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 900px) {
@@ -83,6 +91,17 @@
   }
 }
 
+@media (max-width: 800px) {
+  .menu-items-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-items-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ------------------------------------Gallery page below ------------------------------------------------------- */
 .space-intro {
